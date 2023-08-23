@@ -3,75 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./fullpage.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connie Yang</title>
 </head>
 <body>
 
-    <!-- Top Section -->
-    <a id="top"></a>
-    <section>
+    <!-- Website Cover -->
+    <div id="fullpage">
+        <section class="cover section">
+        <div class="navigation-bar"
+            <ul>
+                <li><a href="#about" class="links" style="color:white">about</a></li>
+                <li><a href="#involvements" class="links" style="color:white">involvements</a></li>
+                <li><a href="#project" class="links" style="color:white">project</a></li>
+                <li><a href="#contact" class="links" style="color:white">contact</a></li>
+            </ul>
+        </div>
+                
         <div class="title">
-            <h1>connie yang </h1>
-            <h3>aspiring software engineer & data scientist, student</h3>
+            <h1>CONNIE YANG </h1>
+            <h3>student programmer</h3>
         </div>
+        </section>
 
-        <div class="navigationBar">
-            <a href="#about" style="color:white">about</a>
-            <a href="#involvements" style="color:white">involvements</a>
-            <a href="#project" style="color:white">project</a>
-        </div>
-    </section>
-
-    <!--About Section-->
-    <section>
-        <a id="about"></a>
-        <div class="lowertop">
-            <div class="description">
-                <h2> connie yang </h2>
-                <h4> Hello! I'm Connie, a Data Science student at UC Irvine. 
-                    I am passionate about continuous learning, community 
-                    service, sustainability, and technology. I am interested 
-                    in making technology more accessible to everyone and protecting
-                    the environment with data-driven approaches.           
-                </h4>
+        <!--About Section-->
+        <section class="about section">
+            <div class="lowertop">
+                <div class="description">
+                    <h2> connie yang </h2>
+                    <h4> Hello! I'm Connie, a Data Science student at UC Irvine. 
+                        I am passionate about continuous learning, community 
+                        service, sustainability, and technology. I am interested 
+                        in making technology more accessible to everyone and protecting
+                        the environment with data-driven approaches.           
+                    </h4>
+                </div>
             </div>
+
+        <div class="centerImage">
+                <!--Add an image of myself here!!>  <img src=""> -->
         </div>
 
-       <div class="centerImage">
-            <!--Add an image of myself here!!>  <img src=""> -->
-       </div>
+        </section>
 
-       <!-- Add familiar technolgies and resume -->
+        <!--Involvements Section-->
+        <section class="involvements section">
+            <div class="company name">
+                <h3><strong>company name</strong> - title </h3>
+                <h4> Date </h4>
+                <ul>
+                    <li>bulleted point</li>
+                    <li>bulleted point</li>
+                    <li>bulleted point</li>
+                </ul>
+            </div>
+        </section>
+
+
+    <!--Projects Section-->
+    <section class="projects section">
+        <div class="projectone"> 
+        <div class="projecttwo">
+        <div class="projectthree">
+
     </section>
 
-    <!--Involvements Section-->
+    <!--Contact Section-->
+    <section class="contact section">
+        <img src="./logo/github.png">
+        <img src="./logo/linkedin.png">
+        
+    </section>   
 
-<a id="involvements"></a>
-<div class="involvements">
-    <div class="company name"
-        <h3><strong>company name</strong> - title </h3>
-        <h4> Date </h4>
-        <ul>
-            <li>bulleted point</li>
-            <li>bulleted point</li>
-            <li>bulleted point</li>
-        </ul>
-    </div>
-<!--Projects Section-->
-<section>
-    <a id="projects"></a>
-    <div class="projectone"> 
-    <div class="projecttwo">
-    <div class="projectthree">
-
-</section>
-
-<!--Contact Section-->
-<section>
-    <a id="contact"></a>
-    <!--Images of github, email, linkedin icons + linking to those websites-->
-</section>   
-    
+<!--Javascript TBD
+   <script src="./fullpage.min.js"></script> 
+   <script src="./app.js"></script>
+   -->
 </body>
 </html>

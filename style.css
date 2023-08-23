@@ -1,0 +1,84 @@
+* {
+    color:white;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cover {
+    background-image: url("./background-img/nebula.png");
+    background-size: cover;
+    height:125vh;
+}
+
+/* nav bar */
+.navigation-bar {
+    position:fixed;
+    top:0;
+    right:0;
+    padding: 20px;
+    justify-content: space-around;
+    display:flex;
+    align-items:flex-start;
+
+    list-style:none;
+    justify-content:flex-end;
+    gap: 30px;
+
+    font-family: "Poppins", Sans-serif;
+    font-weight: 600;
+    font-size:20px;
+
+}
+
+.links {
+    text-decoration:none;
+}
+
+.section h1 {
+    font-family: "Poppins", Sans-serif;
+    font-weight: 800;
+    font-size: 93px;
+    letter-spacing: 2.2px;
+
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+}
+
+.title h3 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 30px;
+    
+    position:absolute;
+    top:60%;
+    left: 55%;
+    transform: translate(-60%, -55%);
+}
+
+.transition {
+    background-image: url('./background-img/black.png');
+    background-size:cover;
+    height:60vh;
+}
+
+.about {
+    background-image: url("./background-img/bluestarrynight.jpg");
+    background-size:cover;
+    height: 110vh;
+}
+
+.involvements {
+    background-image: url("./background-img/purplepink.jpg");
+    background-size:cover;
+    height: 750vh;
+    width: 22s0vh;
+}
+
+
+
+
+
+
+
