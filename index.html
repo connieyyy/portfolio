@@ -3,22 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./fullpage.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connie Yang</title>
 </head>
 <body>
 
     <!-- Website Cover -->
-    <div id="fullpage">
+    <a id="fullpage">
         <section class="cover section">
-        <div class="navigation-bar"
-            <ul>
-                <li><a href="#about" class="links" style="color:white">about</a></li>
-                <li><a href="#involvements" class="links" style="color:white">involvements</a></li>
-                <li><a href="#project" class="links" style="color:white">project</a></li>
-                <li><a href="#contact" class="links" style="color:white">contact</a></li>
-            </ul>
+        <div class="navigation-bar">
+            <a href="#about" class="links" style="color:white">about</a>
+            <a href="#involvements" class="links" style="color:white">involvements</a>
+            <a href="#project" class="links" style="color:white">project</a>
+            <a href="#contact" class="links" style="color:white">contact</a>
         </div>
                 
         <div class="title">
@@ -27,58 +24,92 @@
         </div>
         </section>
 
-        <!--About Section-->
-        <section class="about section">
-            <div class="lowertop">
-                <div class="description">
-                    <h2> connie yang </h2>
-                    <h4> Hello! I'm Connie, a Data Science student at UC Irvine. 
-                        I am passionate about continuous learning, community 
-                        service, sustainability, and technology. I am interested 
-                        in making technology more accessible to everyone and protecting
-                        the environment with data-driven approaches.           
-                    </h4>
-                </div>
-            </div>
-
-        <div class="centerImage">
-                <!--Add an image of myself here!!>  <img src=""> -->
-        </div>
-
-        </section>
-
-        <!--Involvements Section-->
-        <section class="involvements section">
-            <div class="company name">
-                <h3><strong>company name</strong> - title </h3>
-                <h4> Date </h4>
-                <ul>
-                    <li>bulleted point</li>
-                    <li>bulleted point</li>
-                    <li>bulleted point</li>
-                </ul>
-            </div>
-        </section>
-
-
-    <!--Projects Section-->
-    <section class="projects section">
-        <div class="projectone"> 
-        <div class="projecttwo">
-        <div class="projectthree">
-
+     <!--Transition Color -->
+    <section class="transition section">
     </section>
 
-    <!--Contact Section-->
-    <section class="contact section">
-        <img src="./logo/github.png">
-        <img src="./logo/linkedin.png">
-        
-    </section>   
+    <!--About Section-->
+    <section class="about section">
+        <div class="description">
+            <h2> connie yang </h2>
+             <h4> hello! I'm Connie, a Data Science student at UC Irvine. 
+            I am passionate about continuous learning, community 
+            service, sustainability, and technology. I am interested 
+            in making technology more accessible to everyone and protecting
+            the environment with data-driven approaches. </h4>    
+            <img src="./pictures/profile.png" class="profile">
+             <p>resume</p> 
+            
+        </div>
+    </section>
 
-<!--Javascript TBD
-   <script src="./fullpage.min.js"></script> 
-   <script src="./app.js"></script>
-   -->
+    <!--Transition Color -->
+    <section class="transition section">
+    </section>
+    
+     <!--Involvements Section-->
+    <section class="involvements section">
+        <div class="experiences">
+            <h1>Experience</h1>
+            <h3><strong>Green Biome Institute </strong> </h3> <h5> Student Researcher </h5>
+            <h4> June 2022 - October 2022 </h4>
+            <ul>
+                <li>Utilized AWS EC2 to take long and short read sequencing data of sweet potato chloroplast genome and assembled it into annotated contigs </li>
+                <li>Analyzed quality of data with Nanoplot and generated 3 assembles with 2 sets of data </li> 
+                <li>Presented research about endangered gooseberry at the California Native Plant Society conference (1200+ attendees) to attract potential contributors </li>
+            </ul>
+
+            <h3><strong>Kode with Klossy</strong> </h3><h5> Data Science Scholar </h5>
+            <h4> July 2022 - August 2022</h4>
+            <ul>
+                <li>Filtered and cleaned exported data with Python and SQL </li>
+                <li>Built data visualizations with Google Data Studio, DataWrapper, and KnightLab to display on a website to analyze the effects of vaccines </li>
+            </ul>
+
+            <h3><strong>Institute for Systems of Biology: STEM Internship</strong></h3> <h5> Ambassador </h5>
+            <h4> March 2021 - November 2021</h4>
+            <ul>
+                <li>Analyzed and filtered data with Python, Google Colab, and Jupyter Notebook </li>
+                <li>Built data visualizations to illustrate the effects of various chemicals and pH on water potability with NumPy, pandas, and Matplotlib</li>
+                <li>Constructed a linear regression model with sklearn to predict the potability of water</li>
+            </ul>
+
+            <h1>Leadership Experience</h1>
+            <h3><strong>Leadership Experience Opportunity Club (LEO)</strong></h3> <h5> President </h5>
+            <h4> September 2019 - June 2023</h4>
+            <ul>
+                <li>Expanded membership from 12 to 70+ </li>
+                <li>Raised $1700 for Lions International</li>
+                <li>Organized 41 events to expand membership from 12 to 75+ and increase service hours 
+                    from 15 to 1200+ service hours </li>
+                <li>Led bi-weekly board meetings and tri-monthly service events</li>
+                <li>Organized food drive with other clubs to collect 600+ cans</li>
+            
+            <h3><strong>Key Club</strong></h3> <h5>Division News Editor, Ambassador, Volunteer </h5>
+            <h4> September 2019 - June 2023</h4>
+            <ul>
+                <li> Co-managed Instagram page with 600+ followers </li>
+                <li>Designed monthly newsletters and distributed to ~400 members</li>
+                <li>Returned feedback to 8 club editors about graphics and publications </li>
+                <li>Led ambassador team to integrate engaging icebreakers in monthly meetings</li>
+            </ul>
+        </div>
+        </section>
+
+        <!--Projects Section-->
+        <section class="projects section">
+            <div class="projectone"> 
+            <div class="projecttwo">
+            <div class="projectthree">
+        </section>
+
+        <!--Contact Section-->
+        <section class="contact section">
+            <img src="./logo/github.png" class="logo">
+            <img src="./logo/linkedin.png" class="logo">
+        </section>   
+
+        <script></script>
+        <script src="./zenscroll-min.js"></script>
 </body>
 </html>
