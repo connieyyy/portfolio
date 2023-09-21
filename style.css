@@ -185,22 +185,18 @@ background-size: cover;
 
   /*contact*/
   .socials {
-    height: 50vh;
+    height: 30vh;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
   }
-  .socials img {
-   justify-content: center;
-   align-items: center;
-
-  }
  .socials .gitlogo {
-   width: 60%;
-   height: 50%;
+   width: 20%;
+   height: 20%;
+   float: right;
+
  }
  .socials .linkedlogo {
-  width: 60%;
+  width: 20%;
   height: 20%;
-}
-
+ }
