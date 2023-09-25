@@ -19,13 +19,10 @@
     font-size: 20px;
   
   }
-  html {
-    scroll-behavior: smooth;
-  }
+ 
   .links {
     text-decoration: none;
   } 
-
 
   h1{
     font-size: 50px;
@@ -154,32 +151,30 @@ background-size: cover;
 /*about me page*/
 .description{
   display: flex;
-  width: 210vh;
   align-items: center;
   position: relative; 
-  height: 50vh;
 }
 
 .description h4 {
   font-size: 24px;
   font-weight: 500;
-  padding: 30px;
+  padding: 20px;
+  margin: 5%;
   border-radius: 10px;
   background-color: rgba(265, 265, 265, 0.3);
-
-  margin: 5%;
 }
 
 .profile {
   display: flex;
-  height: 100%;
-  width: 100%;
-  padding-right: 30px;
+  position: relative;
+  padding-right: 10%;
+  max-height: 40%;
+  max-width: 40%;
 }
 .resume {
-  float: right;
+  display: block;
   color: white;
-  padding-right: 200px;
+  padding-left: 67%;
   font-size: 30px;
 }
 
