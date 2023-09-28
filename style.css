@@ -113,6 +113,9 @@ background-size: cover;
   display: flex;
   justify-content: center;
 }
+a {
+  text-decoration: none;
+}
 .projects .containers {
   display: flex;
   align-items: center;
