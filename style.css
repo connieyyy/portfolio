@@ -78,9 +78,11 @@
 background-image: url('background-img/purplepink.jpg');
 background-size: cover;
 }
+
 .languages {
   position: relative;
   white-space: nowrap;
+  height: 70vh;
   overflow: auto;
 }
 .languages .slide {
@@ -109,7 +111,7 @@ background-size: cover;
 
 /*projects*/
 .projects {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
 }
@@ -152,6 +154,15 @@ a {
 }
 
 /*about me page*/
+
+.about {
+  height: 70vh;
+  }
+
+#about {
+  padding-top: 20vh;
+}
+  
 .description{
   display: flex;
   align-items: center;
@@ -182,6 +193,10 @@ a {
 }
 
   /*contact*/
+  #contact {
+    color: black;
+  }
+  
   .socials {
     height: 30vh;
     display: flex;
