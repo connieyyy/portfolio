@@ -5,149 +5,51 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/svg+xml" href="logo/cy.png" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Lato:ital,wght@0,400;0,700;1,300&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connie Yang</title>
-    <!-- Website Cover -->
-    <div class="cover section">
-        <div class="navigation-bar">
-            <a href="#about" class="links" style="color:white">about</a>
-            <a href="#tools" class="links" style="color:white">tools</a>
-            <a href="#projects" class="links" style="color:white">projects</a>
-            <a href="#contact" class="links" style="color:white">contact</a>
-        </div>
-                
-        <div class="title">
-            <h1>CONNIE YANG </h1>
-            <h3 id="text"></h3> 
-        </div>
-    </div>
+</head>
+<body>
+  <div class="nav-bar">
+    <img src="logo/cybgrd.png" alt="logo" class="logo-image" onclick="RefreshPage()">
+  </div>
 
-    <div class="transition">
-    </div> 
-
-   <div class="portfolio">
-    <!--About Section-->
-    <h1 data-aos="fade-up" id="about"> about me! </h1> 
-    <section class="about">
-        <div class="description">
-            <div class="about-container">
-                 <h4 data-aos="fade-left"> hello! I'm Connie, a Computer Science student at UC Irvine. 
-                I am passionate about community service, sustainability, and technology. I am interested 
-                in making technology accessible to all and helping protect the environment. I am interested
-                in building full-stack projects. </h4>  
-             </div>  
-             <img src="./pictures/profile.jpeg" data-aos="fade-right" class="profile">
-            
-        </div>
-        <a href="https://drive.google.com/file/d/1gD1ivX5-sA3-sDDyZ1-buPxXE9GnyWF2/view?usp=sharing">
-        <p class="resume">resume</p>
-        </a>
-    </section>
-
-    <!--Languages Section-->
-    <h1 data-aos="fade-up" class="firstheading" id="tools">Development Tools</h1>
-    <section class="languages">
-        <div class="slide">
-          <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
-        </div>
-        
-        <div class="slide">
-          <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg">
-        </div>
-        
-        <div class="slide">
-          <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg">
-        </div>
-        
-        <div class="slide">
-          <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
-        </div>
-        
-        <div class="slide">
-          <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg">
-        </div>
-
-        <div class="slide">
-            <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg">
-        </div>
-
-        <div class="slide">
-            <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg">
-          </div>
-
-          <div class="slide">
-            <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original-wordmark.svg">
-          </div>
-
-          <div class="slide">
-            <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg">
-          </div>
-
-          <div class="slide">
-            <img width="200" height="300" class="slideImage" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg">
-          </div>
-      </section>
-
-   
-    <!--Projects Section-->
-    <h1 data-aos="fade-up" id="projects">Projects</h1>
-    <section class="projects">
-        <a href="https://connieyyy.github.io/solace/">
-        <div data-aos ="fade-up" class="containers">
-            <div class="container1">
-            <img src="pictures/solace.png" class="projects-image">
-            <h2 class="text">Solace</h2>
-            <p class="text">Website that helps with homesickness built with React. Try new recipes from new and familiar cultures. 
-                Create events to remind yourself to reach out to family and friends. Upload images to surround yourself with the fondest memories. 
-            </p>
-            </div>
-        </div>
-        </a>
-
-        <a href="https://connieyyy.github.io/ecolog0/">
-        <div class="containers">
-            <div data-aos ="fade-up" class="container2">
-            <img src="pictures/ecologo.png" class="projects-image">
-            <h2 class="text">Ecologo </h2>
-            <h3 class="text"><em>(Work In Progress!)</em></h3>
-            <p class="text">Website that encourages children and parents to learn more about the environment. Learn about urgent issues, such as 
-                climate change or pollution. View monthly featured park suggestions to explore new areas and learn about our environment.
-                Participate in volunteer opportunities to earn badges. </p>
-            </div>
-        </div>
-        </a>
-
-        
-    </section>
-
-     <!--Contact section-->
-    <div class="contact-title">
-      <h1 data-aos="fade-up" id="contact">socials</h1>
-    </div>
-
-     <section class="contact">
-         <div class="socials">
-             <a href="https://github.com/connieyyy" target="_blank"> <img class ="gitlogo"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" data-aos="flip-right"></a>
-             <a href="https://www.linkedin.com/in/coyang" target="_blank"> <img class="linkedlogo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-plain.svg" data-aos="flip-right"></a>
-     </section>
-
+  <div class="website-cover">
     
-</div>
-        
-</div>
-       
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-        <script src="main.js"></script>
-        <script>
-            AOS.init({
-                duration: 1000
-            });
-        </script>
+    <div class="text-content">
+      <div class="greeting-title">Hello! I am</div>
+      <div class="name-title">Connie Yang</div>
+      <div class="intro"> I am a Computer Science student at UC Irvine, specializing
+        in Intelligent Systems. My passion lies in social good, sustainability,
+        and making technology accessible to everyone. I love diving into full-stack
+        development and exploring the intersection of social good and technology. <br>
+        <br>
+        I am currently a researcher in the <a href="https://faculty.sites.uci.edu/primeau/" target="_blank">Primeau Lab</a>,
+        where I convert MATLAB code to Python to make technology more accessible for 
+        Python users. I also work in the <a href="https://sites.uci.edu/ucimustproject/" target="_blank">UCI MUST Project</a>,
+        where I analyze student behavioral patterns to improve support for college students.
+        I am an organizer at <a href ="https://hack.ics.uci.edu/" target="_blank">Hack At UCI</a>, where I plan weekly
+        workshops and quarterly hackathons. <br>
+        <br>
+        Feel free to connect with me!<br>
+      </div>
+
+      <div class="socials">
+        <a href="https://drive.google.com/file/d/14646_GFZHYhGOZKimrgXn0umA9O7zxDN/view?usp=sharingv" target="_blank">Resume</a>
+        <a href="https://github.com/connieyyy" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/coyang" target="_blank">LinkedIn</a>
+        <a href="mailto:con.yang4098@gmail.com">Email</a>
+      </div>
+      <!-- buttons for linkedin and github and email -->
+    </div>
+    <img src="pictures/fullme.jpg" alt="picture of Connie" class="profile-image">
+  </div>
+
+  <script>
+    // JavaScript function to reload the current page
+    function refreshPage() {
+        window.location.reload();
+    }
+</script>
+
 </body>
 </html>

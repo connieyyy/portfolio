@@ -3,213 +3,98 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
-  }
-  /* nav bar */
-  .navigation-bar {
-    display: flex;
-    float: right;
-    flex-direction: row; 
-    justify-content:flex-end;
-    position: fixed;
-    padding: 1vw; 
-  
-    gap: 30px;
-    font-weight: 600;
-    font-size: 20px;
-  
-  }
- 
-  .links {
-    text-decoration: none;
-  } 
-
-  h1{
-    font-size: 50px;
-    padding-top: 80px;
-    padding-bottom: 30px;
-    font-weight: 700;
-  
-    align-items: center;
-    text-align: center;
-    justify-content: center;  
-  }
-  /* cover section */
-  .cover {
-    background-image: url("./background-img/nebula.png");
-    background-size: cover;
-    height: 140vh;
-
-  }
-  #text {
-    border-right: solid white 4px;
-    height: 10px;
-  }
-  
-  .cover h1 {
-    font-weight: 1000;
-    font-size: 120px;
-    letter-spacing: 2.2px;
-    white-space: nowrap;
-  
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-  }
-  
-  .title h3 {
-    font-size: 30px;
-
-    position: absolute;
-    top: 70%;
-    left: 55%;
-    transform: translate(-60%, -55%);
-  }
-  /* transition section */
-  .transition {
-    margin-top: -300px;
-    height: 200px;
-    background: linear-gradient(rgba(0, 0,0,0) 0%, #000 50%);
-  }
-  
-/*languages section */
-.portfolio {
-background-image: url('background-img/purplepink.jpg');
-background-size: cover;
+    font-family: 'Inter', sans-serif;
 }
 
-.languages {
-  position: relative;
-  white-space: nowrap;
-  height: 70vh;
-  overflow: auto;
-}
-.languages .slide {
-  display: inline-block;
-  position: relative;
-  padding: 1%;
-}
-.slideText {
-  position: absolute;
-  bottom: 50px;
-  left: 55%;
-  
-  color: black;
-  z-index: 1;
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
-}
-.slideImage {
-  transform-origin: bottom left;
-  background: white;
-  border-radius: 10px;
-  width: 70%;
-  padding: 20px;
+.nav-bar {
+  background-color: #0D161D;
+  height: 12vh;
+
+  overflow: hidden;
+  background-color: none; 
+  position: fixed;
+  width: 100%; 
+  top: 0; 
+  z-index: 1000;
 }
 
-/*projects*/
-.projects {
-  height: 70vh;
+.logo-image {
+  padding: 10px;
+  max-width: 70px;
+
+  cursor: pointer; 
+  border: none; 
+  background: none;
+  padding: 0; 
+}
+
+.website-cover {
+  background-color: #0D161D;
+
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 20px; 
+  height: 90vh;
+}
+
+.text-content {
   display: flex;
-  justify-content: center;
-}
-a {
-  text-decoration: none;
-}
-.projects .containers {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column; 
+  flex: 1; 
+  padding-right: 20px; 
 }
 
-.projects .container1, 
-.projects .container2 {
-  display: block;
-  margin: 30px;
-  width: 350px;
-  height: 550px;
-  border-radius: 10px;
-  background-color: black;
-  
-  text-align: center;
+.profile-image {
+  max-width: 400px; 
+  height: auto; 
+  padding-right: 80px;
 }
 
-.containers img {
-  width: 60%;
-  place-items: center;
-  margin-top: 50px;
+.title-space {
+  height:15vh;
+  background-color: #0D161D
 }
 
-.projects .text {
+.greeting-title {
+  font-weight: 250;
+  font-size: 2em;
   padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
-  text-align: center;
+  padding-left: 100px;
 }
 
-.projects h2 {
-  font-size: 40px;
+.name-title {
+  font-weight: 400;
+  font-size: 3em;
+  padding-left: 100px;
 }
 
-/*about me page*/
-
-.about {
-  height: 70vh;
-  }
-
-#about {
-  padding-top: 20vh;
-}
-  
-.description{
-  display: flex;
-  align-items: center;
-  position: relative; 
+.intro {
+  font-size: 1em;
+  color: #78848A;
+  line-height: 1.5;
+  font-weight: 300;
+  padding-right: 75px;
+  padding-left: 100px;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-.description h4 {
-  font-size: 24px;
-  font-weight: 500;
-  padding: 20px;
-  margin: 5%;
-  border-radius: 10px;
-  background-color: rgba(265, 265, 265, 0.3);
+.socials {
+  padding-left: 100px; /* Add padding around the content inside the div */
 }
 
-.profile {
-  display: flex;
-  position: relative;
-  padding-right: 10%;
-  max-height: 40%;
-  max-width: 40%;
-}
-.resume {
-  display: block;
-  color: white;
-  padding-left: 67%;
-  font-size: 30px;
+.socials a {
+  display: inline-block; /* Display links as blocks to apply padding */
+  margin-right: 10px; /* Add spacing between links */
+  padding: 5px 10px; /* Add padding inside each link */
+  text-decoration: none; /* Remove underline */
+  color: white; /* Link color */
+  border: 1px solid white; /* Add border */
+  border-radius: 5px; /* Rounded corners */
 }
 
-  /*contact*/
-  #contact {
-    color: black;
-  }
-  
-  .socials {
-    height: 30vh;
-    display: flex;
-    justify-content:center;
-    align-items: center;
-  }
- .socials .gitlogo {
-   width: 20%;
-   height: 20%;
-   float: right;
-
- }
- .socials .linkedlogo {
-  width: 20%;
-  height: 20%;
- }
+.socials a:hover {
+  background-color: #007bff; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
