@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connie Yang</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/MotionPathPlugin.min.js"></script>
 </head>
+
+
 <body>
   <div class="nav-bar">
-    <img src="logo/cybgrd.png" alt="logo" class="logo-image" onclick="RefreshPage()">
+    <img src="logo/cybgrd.png" alt="logo" class="logo-image" onclick="refreshPage()">
   </div>
 
   <div class="website-cover">
-    
     <div class="text-content">
       <div class="greeting-title">Hello! I am</div>
       <div class="name-title">Connie Yang</div>
@@ -39,42 +43,125 @@
         <a href="https://www.linkedin.com/in/coyang" target="_blank">LinkedIn</a>
         <a href="mailto:con.yang4098@gmail.com">Email</a>
       </div>
-      <!-- buttons for linkedin and github and email -->
     </div>
     <img src="pictures/fullme.jpg" alt="picture of Connie" class="profile-image">
   </div>
 
-  <!-- <div class="experience">
-    <svg id="bee-scroll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1588.4 2762.3">
+  <div class="transition"></div>
+
+  <div class="experience">
+
+    <div class="left-text">
+      <div class="left-subtitle">MY PROFESSIONAL JOURNEY</div>
+      <div class="left-title">Experience</div>
+      <div class="left-content">Showcasing my contributions, roles, and the impact I have made in various
+        projects and organizations. From full stack development to research and event organization, discover how
+        I have applied my skills to drive innovation and social good. </div>
+    </div>
+
+    <svg id="bee-scroll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 450">
       <defs>
         <clipPath id="clip-path">
           <rect id="Rectangle_2885" data-name="Rectangle 2885" width="89.252" height="72.066" fill="none"/>
         </clipPath>
       </defs>
-      
+        
       <style type="text/css">
         .st0{fill:none;}
       </style>
 
-      <path id="motionPath" class="st0" d="M37.5,31C32.5,41.2,52.3,122.6,358,237.2c222.1,69.8,610.9-11.5,861.3,82.5
-                                          c236.4,88.8,340.3,257.8,323.7,416.2c-19.9,209.7-162.4,595.6-340.4,613.1c-106.6-36.6-174.3,34.9-127.1,196.4
-                                          c-24.6,284.5-286.8,140-346.4,140c-182.9-15.9-269.3,213.5-155.7,344.2c118,135.7,31.2,223.3,392,144.9
-                                          c158.4-34.4,182.2,81,177.4,136.5c-26.9,51.3-27.4,334.3-150.7,382.5c-112.9,44.1-263.8-30.3-397.7-64.7
-                                          c-141.7-36.4-257.9,86.3-257.9,86.3" stroke="#78848A" stroke-miterlimit="10" stroke-width="4" stroke-dasharray="4"/>
+      <path id="motionPath" class="st0" d="M100,0 C50,25 50,75 100,100 S150,175 100,200 S50,275 100,300 S150,375 100,400" stroke="#78848A" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="2.3"/>
+    
       <g id="motionSVG" data-name="Group 1117">
-        Added circle -->
-        <circle cx="50" cy="54" r="15" fill="white" />
+        <circle cx="50" cy="54" r="5" fill="white" />
       </g>
     </svg>
+
+    <div class="xp-collection">
+      <div class="xp2">
+        <div class="xp-title2">UC Irvine MUST Project</div>
+        <div class="xp-role2">Data Science Research Assistant</div>
+        <div class="xp-languages2">AWS Redshift, SQL, R</div>
+      </div>
+
+      <div class="xp">
+        <div class="xp-title">UC Irvine Department of Earth Systems Science</div>
+        <div class="xp-role">Research Assistant</div>
+        <div class="xp-languages">Python, MATLAB, SciPy, NumPy</div>
+      </div>
+
+      <div class="xp2">
+        <div class="xp-title2">UC Irvine Department of Computer Science</div>
+        <div class="xp-role2">Learning Assistant</div>
+        <div class="xp-languages2">Python</div>
+      </div>
+
+      <div class="xp">
+        <div class="xp-title">Hack At UCI</div>
+        <div class="xp-role">Logistics Organizer</div>
+      </div>
+    </div>  
+
   </div>
 
+  <div class="projects-title"></div>
+  <div class="projects-collection">
+    
+    <div class="project-box">
+      <img src="pictures/portfolio.png" alt="logo" class="project-pic">
+      <div class="overlay">
+        <div class="project-title">Portfolio</div>
+        <div class="project-languages">HTML, CSS, Javascript</div>
+        <div class="project-intro">The portfolio depicts my interests, experiences, and projects.</div>
+      </div>
+    </div>
+    
+
+    <div class="project-box">
+      <img src="pictures/solace.png" class="project-pic">
+      <div class="overlay">
+        <div class="project-title">Solace</div>
+        <div class="project-languages">MongoDB, Express, React, Node.js, AWS EC2, S3</div>
+        <div class="project-intro">Solace is a website that helps with homesickness. Try new recipes
+          and familiar cultures. Upload images to surround yourself with the fondest memories.
+        </div>
+      </div>
+    </div>
+
+    <div class="project-box">
+      <img src="pictures/ecologo.png" class="project-pic">
+      <div class="overlay">
+        <div class="project-title">Ecologo</div>
+        <div class="project-languages">HTML, CSS, Javascript</div>
+        <div class="project-intro">Ecologo encourages children and parents to learn more about the
+          environment. Learn more about urgent issues and earn badges or stickers.
+        </div>
+      </div>
+    </div>
+
+    <div class="project-box">
+      <img src="pictures/matchy.png" class="project-pic">
+      <div class="overlay">
+        <div class="project-title">MentorMatchy</div>
+        <div class="project-languages">React, TypeScript, Firebase, Flask, CockroachDB</div>
+        <div class="project-intro">MentorMatchy is a platform for aspiring female professionals and
+          established women alike to make connections that fit their unique career goals.
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    <div class="copy-text">&copy; 2024 by Connie Yang</div>
+  </div>
 
   <script>
-    // JavaScript function to reload the current page
     function refreshPage() {
         window.location.reload();
     }
-</script>
+  </script>
 
+  <script src="main.js"></script> 
 </body>
 </html>
