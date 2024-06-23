@@ -1,167 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
     <link rel="icon" type="image/svg+xml" href="logo/cy.png" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Connie Yang</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/MotionPathPlugin.min.js"></script>
-</head>
+  </head>
 
-
-<body>
-  <div class="nav-bar">
-    <img src="logo/cybgrd.png" alt="logo" class="logo-image" onclick="refreshPage()">
-  </div>
-
-  <div class="website-cover">
-    <div class="text-content">
-      <div class="greeting-title">Hello! I am</div>
-      <div class="name-title">Connie Yang</div>
-      <div class="intro"> I am a Computer Science student at UC Irvine, specializing
-        in Intelligent Systems. My passion lies in social good, sustainability,
-        and making technology accessible to everyone. I love diving into full-stack
-        development and exploring the intersection of social good and technology. <br>
-        <br>
-        As a researcher in the <a href="https://faculty.sites.uci.edu/primeau/" target="_blank">Primeau Lab</a>,
-        I convert MATLAB code to Python to make technology more accessible for 
-        Python users. I work in the <a href="https://sites.uci.edu/ucimustproject/" target="_blank">UCI MUST Project</a>,
-        where I analyze student behavioral patterns to improve support for college students.
-        I am also an organizer at <a href ="https://hack.ics.uci.edu/" target="_blank">Hack At UCI</a>, where I plan bi-weekly
-        workshops and quarterly hackathons. <br>
-        <br>
-        Feel free to connect with me!<br>
-      </div>
-
-      <div class="socials">
-        <a href="https://drive.google.com/file/d/14646_GFZHYhGOZKimrgXn0umA9O7zxDN/view?usp=sharingv" target="_blank">Resume</a>
-        <a href="https://github.com/connieyyy" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/coyang" target="_blank">LinkedIn</a>
-        <a href="mailto:con.yang4098@gmail.com">Email</a>
-      </div>
-    </div>
-    <img src="pictures/fullme.jpg" alt="picture of Connie" class="profile-image">
-  </div>
-
-  <div class="transition"></div>
-
-  <div class="experience">
-
-    <div class="left-text">
-      <div class="left-subtitle">MY PROFESSIONAL JOURNEY</div>
-      <div class="left-title">Experience</div>
-      <div class="left-content">Showcasing my contributions, roles, and the impact I have made in various
-        projects and organizations. From full stack development to research and event organization, discover how
-        I have applied my skills to drive innovation and social good. </div>
+  <body>
+    <div class="nav-bar">
+      <img
+        src="logo/cybgrd.png"
+        alt="logo"
+        class="logo-image"
+        onclick="refreshPage()"
+      />
     </div>
 
-    <svg id="bee-scroll" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 250 450">
-      <defs>
-        <clipPath id="clip-path">
-          <rect id="Rectangle_2885" data-name="Rectangle 2885" width="89.252" height="72.066" fill="none"/>
-        </clipPath>
-      </defs>
-        
-      <style type="text/css">
-        .st0{fill:none;}
-      </style>
+    <div class="website-cover">
+      <div class="text-content">
+        <div class="greeting-title">Hello! I am</div>
+        <div class="name-title">Connie Yang</div>
+        <div class="intro">
+          I am a Computer Science student at UC Irvine, specializing in
+          Intelligent Systems. My passion lies in social good, sustainability,
+          and making technology accessible to everyone. I love diving into
+          full-stack development and exploring the intersection of social good
+          and technology. <br />
+          <br />
+          As a researcher in the
+          <a href="https://faculty.sites.uci.edu/primeau/" target="_blank"
+            >Primeau Lab</a
+          >, I convert MATLAB code to Python to make technology more accessible
+          for Python users. I work in the
+          <a href="https://sites.uci.edu/ucimustproject/" target="_blank"
+            >UCI MUST Project</a
+          >, where I analyze student behavioral patterns to improve support for
+          college students. I am also an organizer at
+          <a href="https://hack.ics.uci.edu/" target="_blank">Hack At UCI</a>,
+          where I plan bi-weekly workshops and quarterly hackathons. <br />
+          <br />
+          Feel free to connect with me!<br />
+        </div>
 
-      <path id="motionPath" class="st0" d="M100,0 C50,25 50,75 100,100 S150,175 100,200 S50,275 100,300 S150,375 100,400" stroke="#78848A" stroke-miterlimit="10" stroke-width="1" stroke-dasharray="2.3"/>
-    
-      <g id="motionSVG" data-name="Group 1117">
-        <circle cx="50" cy="54" r="5" fill="white" />
-      </g>
-    </svg>
-
-    <div class="xp-collection">
-      <div class="xp2">
-        <div class="xp-title2">UC Irvine MUST Project</div>
-        <div class="xp-role2">Data Science Research Assistant</div>
-        <div class="xp-languages2">AWS Redshift, SQL, R</div>
+        <div class="socials">
+          <a
+            href="https://drive.google.com/file/d/1XK_tukdGfV0rEGSX7M9jl_qVS0I7Zg-r/view?usp=sharing"
+            target="_blank"
+            >Resume</a
+          >
+          <a href="https://github.com/connieyyy" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/coyang" target="_blank"
+            >LinkedIn</a
+          >
+          <a href="mailto:con.yang4098@gmail.com">Email</a>
+        </div>
       </div>
-
-      <div class="xp">
-        <div class="xp-title">UC Irvine Department of Earth Systems Science</div>
-        <div class="xp-role">Research Assistant</div>
-        <div class="xp-languages">Python, MATLAB, SciPy, NumPy</div>
-      </div>
-
-      <div class="xp2">
-        <div class="xp-title2">UC Irvine Department of Computer Science</div>
-        <div class="xp-role2">Learning Assistant</div>
-        <div class="xp-languages2">Python</div>
-      </div>
-
-      <div class="xp">
-        <div class="xp-title">Hack At UCI</div>
-        <div class="xp-role">Logistics Organizer</div>
-      </div>
-    </div>  
-
-  </div>
-
-  <div class="projects-title"></div>
-  <div class="projects-collection">
-    
-    <div class="project-box">
-      <img src="pictures/portfolio.png" alt="logo" class="project-pic">
-      <div class="overlay">
-        <div class="project-title">Portfolio</div>
-        <div class="project-languages">HTML, CSS, Javascript</div>
-        <div class="project-intro">The portfolio depicts my interests, experiences, and projects.</div>
-      </div>
+      <img
+        src="pictures/fullme.jpg"
+        alt="picture of Connie"
+        class="profile-image"
+      />
     </div>
-    
 
-    <div class="project-box">
-      <img src="pictures/solace.png" class="project-pic">
-      <div class="overlay">
-        <div class="project-title">Solace</div>
-        <div class="project-languages">MongoDB, Express, React, Node.js, AWS EC2, S3</div>
-        <div class="project-intro">Solace is a website that helps with homesickness. Try new recipes
-          and familiar cultures. Upload images to surround yourself with the fondest memories.
+    <div class="transition"></div>
+
+    <div class="experience">
+      <div class="left-text">
+        <div class="left-subtitle">MY PROFESSIONAL JOURNEY</div>
+        <div class="left-title">Experience</div>
+        <div class="left-content">
+          Showcasing my contributions, roles, and the impact I have made in
+          various projects and organizations. From full stack development to
+          research and event organization, discover how I have applied my skills
+          to drive innovation and social good.
+        </div>
+      </div>
+
+      <svg
+        id="bee-scroll"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 0 250 450"
+      >
+        <defs>
+          <clipPath id="clip-path">
+            <rect
+              id="Rectangle_2885"
+              data-name="Rectangle 2885"
+              width="89.252"
+              height="72.066"
+              fill="none"
+            />
+          </clipPath>
+        </defs>
+
+        <style type="text/css">
+          .st0 {
+            fill: none;
+          }
+        </style>
+
+        <path
+          id="motionPath"
+          class="st0"
+          d="M100,0 C50,25 50,75 100,100 S150,175 100,200 S50,275 100,300 S150,375 100,400"
+          stroke="#78848A"
+          stroke-miterlimit="10"
+          stroke-width="1"
+          stroke-dasharray="2.3"
+        />
+
+        <g id="motionSVG" data-name="Group 1117">
+          <circle cx="50" cy="54" r="5" fill="white" />
+        </g>
+      </svg>
+
+      <div class="xp-collection">
+        <div class="xp2">
+          <div class="xp-title2">UC Irvine MUST Project</div>
+          <div class="xp-role2">Data Science Research Assistant</div>
+          <div class="xp-languages2">AWS Redshift, SQL, R</div>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">
+            UC Irvine Department of Earth Systems Science
+          </div>
+          <div class="xp-role">Research Assistant</div>
+          <div class="xp-languages">Python, MATLAB, SciPy, NumPy</div>
+        </div>
+
+        <div class="xp2">
+          <div class="xp-title2">UC Irvine Department of Computer Science</div>
+          <div class="xp-role2">Learning Assistant</div>
+          <div class="xp-languages2">Python</div>
+        </div>
+
+        <div class="xp">
+          <div class="xp-title">Hack At UCI</div>
+          <div class="xp-role">Logistics Organizer</div>
         </div>
       </div>
     </div>
 
-    <div class="project-box">
-      <img src="pictures/ecologo.png" class="project-pic">
-      <div class="overlay">
-        <div class="project-title">Ecologo</div>
-        <div class="project-languages">HTML, CSS, Javascript</div>
-        <div class="project-intro">Ecologo encourages children and parents to learn more about the
-          environment. Learn more about urgent issues and earn badges or stickers.
+    <div class="projects-title">Projects</div>
+    <div class="projects-collection">
+      <div class="project-box">
+        <img src="pictures/portfolio.png" alt="logo" class="project-pic" />
+        <div class="overlay">
+          <div class="project-title">Portfolio</div>
+          <div class="project-languages">HTML, CSS, Javascript</div>
+          <div class="project-intro">
+            The portfolio depicts my interests, experiences, and projects.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <img src="pictures/solace.png" class="project-pic" />
+        <div class="overlay">
+          <div class="project-title">Solace</div>
+          <div class="project-languages">
+            MongoDB, Express, React, Node.js, AWS EC2, S3
+          </div>
+          <div class="project-intro">
+            Solace is a website that helps with homesickness. Try new recipes
+            and familiar cultures. Upload images to surround yourself with the
+            fondest memories.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <img src="pictures/ecologo.png" class="project-pic" />
+        <div class="overlay">
+          <div class="project-title">Ecologo</div>
+          <div class="project-languages">HTML, CSS, Javascript</div>
+          <div class="project-intro">
+            Ecologo encourages children and parents to learn more about the
+            environment. Learn more about urgent issues and earn badges or
+            stickers.
+          </div>
+        </div>
+      </div>
+
+      <div class="project-box">
+        <img src="pictures/matchy.png" class="project-pic" />
+        <div class="overlay">
+          <div class="project-title">MentorMatchy</div>
+          <div class="project-languages">
+            React, TypeScript, Firebase, Flask, CockroachDB
+          </div>
+          <div class="project-intro">
+            MentorMatchy is a platform for aspiring female professionals and
+            established women alike to make connections that fit their unique
+            career goals.
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="project-box">
-      <img src="pictures/matchy.png" class="project-pic">
-      <div class="overlay">
-        <div class="project-title">MentorMatchy</div>
-        <div class="project-languages">React, TypeScript, Firebase, Flask, CockroachDB</div>
-        <div class="project-intro">MentorMatchy is a platform for aspiring female professionals and
-          established women alike to make connections that fit their unique career goals.
-        </div>
-      </div>
+    <div class="footer">
+      <div class="copy-text">&copy; 2024 by Connie Yang</div>
     </div>
 
-  </div>
-
-  <div class="footer">
-    <div class="copy-text">&copy; 2024 by Connie Yang</div>
-  </div>
-
-  <script>
-    function refreshPage() {
+    <script>
+      function refreshPage() {
         window.location.reload();
-    }
-  </script>
+      }
+    </script>
 
-  <script src="main.js"></script> 
-</body>
+    <script src="main.js"></script>
+  </body>
 </html>
