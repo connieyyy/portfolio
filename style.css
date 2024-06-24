@@ -48,11 +48,27 @@
   max-width: 400px;
   height: auto;
   padding-right: 80px;
+  border-radius: 20px;
 }
 
 .title-space {
   height: 15vh;
   background-color: #0d161d;
+}
+
+.title-wrap_title {
+  font-weight: 500;
+}
+.title-wrap_subtitle-wrap {
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.title-wrap_subtitle {
+  color: rgba(245, 245, 245, 0.5);
+  letter-spacing: 0.25rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
 }
 
 .greeting-title {
@@ -102,6 +118,10 @@
   height: 40vh;
   background-color: #0d161d;
   font-size: 1rem;
+}
+
+.section-process {
+  background-color: #0d161d;
 }
 
 .experience {
@@ -331,4 +351,242 @@
   .project-box {
     width: calc(100% - 20px); /* 1 per row for small screens */
   }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font-family: sans-serif;
+}
+
+section {
+  display: block;
+}
+
+a {
+  background-color: transparent;
+}
+
+img {
+  border: 0;
+}
+
+svg {
+  display: block;
+  width: 100px;
+  height: 100px;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: webflow-icons;
+  src: url(data:application/x-font-ttf;charset=utf-8;base64,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)
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.w-embed:before,
+.w-embed:after {
+  content: " ";
+  grid-area: 1/1/2/2;
+  display: table;
+}
+
+.w-embed:after {
+  clear: both;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: Neue Plak, sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.page-padding {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.mw-l {
+  width: 100%;
+  max-width: 48rem;
+}
+
+.m-s {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 1rem;
+}
+
+.mb {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1.15 rem;
+  overflow: hidden;
+}
+
+.mb.mw-l {
+  margin-left: -6rem;
+  max-width: 42.5rem;
+}
+
+.h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.h3.font-neue-plak.font-light {
+  font-weight: 300;
+}
+
+.hack-logo,
+.icslogo,
+.must-logo,
+.ess-logo {
+  width: 15%;
+}
+
+.h5 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.h2 {
+  font-size: 3rem;
+  line-height: 1.25;
+}
+
+.section-process {
+  z-index: 2;
+  width: 100vw;
+  height: 310vh;
+  margin-top: -15vh;
+  position: relative;
+  overflow: visible;
+}
+
+.process_line {
+  width: 10rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%);
+}
+
+.process_line-svg {
+  width: 10rem;
+  height: 100vh;
+  transform: rotate(180deg);
+}
+
+.process_header {
+  justify-content: flex-start;
+  align-items: center;
+  width: 40%;
+  height: 100vh;
+  margin-left: 0;
+  margin-right: auto;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.process_overlay.alternate {
+  top: auto;
+  bottom: 0;
+  transform: rotate(180deg);
+}
+
+.process_content {
+  width: 60%;
+  margin-left: auto;
+  margin-right: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+.process_wrap {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  display: flex;
+}
+
+.process_wrapper {
+  width: 100vw;
+  max-width: 90rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.process_step {
+  width: 100%;
+  max-width: 25rem;
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.process_steps-wrap {
+  height: 100%;
+  padding-left: 10rem;
+}
+
+.process_overlay {
+  z-index: 1;
+  background-image: linear-gradient(to bottom, var(--dark) 25%, transparent);
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.process_step.pull-left {
+  margin-left: -10rem;
+}
+
+.color-sky.text-small,
+.color-sky.text-regular {
+  color: #78848a;
+  font-weight: 300;
 }
