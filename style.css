@@ -332,8 +332,17 @@
     width: calc(100% - 20px);
   }
 
+  .intro {
+    padding: 0px;
+  }
+
+  .intro {
+    padding-top: 5px;
+  }
+
   .socials {
-    padding-left: 0px;
+    padding: 0px;
+    margin-top: 8px;
   }
 }
 
