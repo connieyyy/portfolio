@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import FroggyFriend from "./images/appdemo.png";
 
 export default function Work() {
   const projects = [
@@ -34,7 +36,7 @@ export default function Work() {
     },
     {
       title: "Froggy Friend",
-      image: "https://via.placeholder.com/300x200?text=Froggy",
+      image: FroggyFriend,
       description: "Frog companion mobile app.",
       link: "#",
     },
@@ -47,7 +49,6 @@ export default function Work() {
         style={{
           background: "transparent",
           padding: "20px 40px",
-          position: "sticky",
           top: 0,
           zIndex: 100,
         }}
@@ -60,32 +61,34 @@ export default function Work() {
               fontSize: "16px",
             }}
           >
-            <a
-              href="/#about"
+            <Link
+              to="/"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
-                fontWeight: "500",
+                fontWeight: "400",
               }}
             >
               about
-            </a>
-            <a
-              href="/work"
+            </Link>
+            <Link
+              to="/work"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
-                fontWeight: "500",
+                fontWeight: "400",
               }}
             >
               work
-            </a>
+            </Link>
             <a
-              href="/#resume"
+              href="https://drive.google.com/drive/u/2/folders/1pugtl2c9JIufoZAPftpLLyaW-M2NsfE6"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
-                fontWeight: "500",
+                fontWeight: "400",
               }}
             >
               resume

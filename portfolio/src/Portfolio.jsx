@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import HackLogo from "./images/hack-logo.png";
 import IcsLogo from "./images/ucidbh.jpeg";
 import AmazonLogo from "./images/aws-logo.jpeg";
@@ -70,10 +71,8 @@ export default function Portfolio() {
               fontSize: "16px",
             }}
           >
-            <a
-              href="https://connieyyy.github.io/portfolio/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -81,9 +80,9 @@ export default function Portfolio() {
               }}
             >
               about
-            </a>
-            <a
-              href="/work"
+            </Link>
+            <Link
+              to="/work"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -91,7 +90,7 @@ export default function Portfolio() {
               }}
             >
               work
-            </a>
+            </Link>
             <a
               href="https://drive.google.com/drive/u/2/folders/1pugtl2c9JIufoZAPftpLLyaW-M2NsfE6"
               target="_blank"
