@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.js": "/portfolio/static/js/main.be1f98d2.js",
+    "static/js/453.0b72f93f.chunk.js": "/portfolio/static/js/453.0b72f93f.chunk.js",
+    "static/media/hack-logo.png": "/portfolio/static/media/hack-logo.83082790fbc125b2827c.png",
+    "static/media/arity-logo.jpeg": "/portfolio/static/media/arity-logo.23d7553f211fe8414073.jpeg",
+    "static/media/ucidbh.jpeg": "/portfolio/static/media/ucidbh.6b2e926174bd065427be.jpeg",
+    "index.html": "/portfolio/index.html",
+    "main.be1f98d2.js.map": "/portfolio/static/js/main.be1f98d2.js.map",
+    "453.0b72f93f.chunk.js.map": "/portfolio/static/js/453.0b72f93f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.be1f98d2.js"
+  ]
+}
