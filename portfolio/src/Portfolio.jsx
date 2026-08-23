@@ -5,6 +5,11 @@ import IcsLogo from "./images/ucidbh.jpeg";
 import AmazonLogo from "./images/aws-logo.jpeg";
 import ArityLogo from "./images/arity-logo.jpeg";
 import EssLogo from "./images/uciess.jpeg";
+import ChihulyMe from "./images/me-chihuly.jpg";
+import GriffithMe from "./images/me-griffith.jpg";
+import HellenikaMe from "./images/me-hellenika.jpg";
+import IrvineHacksMe from "./images/fullme.jpg";
+import DisneyMe from "./images/me-disney.jpg";
 
 export default function Portfolio() {
   const experiences = [
@@ -77,6 +82,13 @@ export default function Portfolio() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               about
@@ -87,6 +99,13 @@ export default function Portfolio() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               work
@@ -99,6 +118,13 @@ export default function Portfolio() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               resume
@@ -107,27 +133,100 @@ export default function Portfolio() {
         </div>
       </nav>
 
-      {/* Main content */}
       <div
         style={{
           padding: "60px 40px 100px",
           minHeight: "100vh",
         }}
       >
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {/* Image blob placeholder */}
+        <div
+          style={{
+            maxWidth: "900px",
+            margin: "0 auto 50px",
+            overflowX: "auto",
+            overflowY: "hidden",
+            paddingBottom: "10px",
+          }}
+        >
           <div
             style={{
-              width: "650px",
-              height: "160px",
-              background: "#2d3e50",
-              borderRadius: "60px",
-              margin: "0 auto 50px",
-              opacity: 0.3,
+              display: "flex",
+              gap: "20px",
+              justifyContent: "center",
             }}
-          />
+          >
+            <img
+              src={GriffithMe}
+              alt="Gallery"
+              style={{
+                width: "140px",
+                height: "180px",
+                borderRadius: "30px",
+                objectFit: "cover",
+                flexShrink: 0,
+                transform: "rotate(-10deg)",
+                marginTop: "30px",
+                marginBottom: "30px",
+              }}
+            />
+            <img
+              src={ChihulyMe}
+              alt="Gallery"
+              style={{
+                width: "140px",
+                height: "180px",
+                borderRadius: "30px",
+                objectFit: "cover",
+                flexShrink: 0,
+                transform: "rotate(5deg)",
+                marginTop: "30px",
+                marginBottom: "30px",
+              }}
+            />
+            <img
+              src={HellenikaMe}
+              alt="Gallery"
+              style={{
+                width: "140px",
+                height: "180px",
+                borderRadius: "30px",
+                objectFit: "cover",
+                flexShrink: 0,
+                transform: "rotate(-6deg)",
+                marginTop: "30px",
+                marginBottom: "30px",
+              }}
+            />
+            <img
+              src={IrvineHacksMe}
+              alt="Gallery"
+              style={{
+                width: "140px",
+                height: "180px",
+                borderRadius: "30px",
+                objectFit: "cover",
+                flexShrink: 0,
+                transform: "rotate(8deg)",
+                marginTop: "30px",
+                marginBottom: "30px",
+              }}
+            />
+            <img
+              src={DisneyMe}
+              alt="Gallery"
+              style={{
+                width: "140px",
+                height: "180px",
+                borderRadius: "30px",
+                objectFit: "cover",
+                flexShrink: 0,
+                transform: "rotate(-2deg)",
+                marginTop: "30px",
+                marginBottom: "30px",
+              }}
+            />
+          </div>
 
-          {/* About Section */}
           <div
             id="about"
             style={{

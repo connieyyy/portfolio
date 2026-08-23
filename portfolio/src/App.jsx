@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
 import Work from "./Work";
 
-const basename = process.env.NODE_ENV === "production" ? "/portfolio" : "/";
+const basename = process.env.NODE_ENV === "production" ? "/portfolio" : "";
 
 export default function App() {
   return (
@@ -11,6 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/work" element={<Work />} />
+        <Route path="*" element={<Portfolio />} />
       </Routes>
     </BrowserRouter>
   );

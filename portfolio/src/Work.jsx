@@ -67,6 +67,13 @@ export default function Work() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               about
@@ -77,6 +84,13 @@ export default function Work() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               work
@@ -89,6 +103,13 @@ export default function Work() {
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
+                transition: "text-decoration 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.textDecoration = "underline";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.textDecoration = "none";
               }}
             >
               resume
