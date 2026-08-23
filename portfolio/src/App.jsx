@@ -1,10 +1,15 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
+import Work from "./Work";
 
 export default function App() {
   return (
-    <div style={{ width: "100%", margin: 0, padding: 0 }}>
-      <Portfolio />
-    </div>
+    <BrowserRouter basename="/portfolio">
+      <Routes>
+        <Route path="/" element={<Portfolio />} />
+        <Route path="/work" element={<Work />} />
+      </Routes>
+    </BrowserRouter>
   );
 }

@@ -53,6 +53,57 @@ export default function Portfolio() {
 
   return (
     <div style={{ width: "100%", margin: 0, padding: 0 }}>
+      {/* Navigation Bar */}
+      <nav
+        style={{
+          background: "transparent",
+          padding: "20px 40px",
+          top: 0,
+          zIndex: 100,
+        }}
+      >
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "40px",
+              fontSize: "16px",
+            }}
+          >
+            <a
+              href="#about"
+              style={{
+                textDecoration: "none",
+                color: "#1a1a1a",
+                fontWeight: "400",
+              }}
+            >
+              about
+            </a>
+            <a
+              href="/work"
+              style={{
+                textDecoration: "none",
+                color: "#1a1a1a",
+                fontWeight: "400",
+              }}
+            >
+              work
+            </a>
+            <a
+              href="#resume"
+              style={{
+                textDecoration: "none",
+                color: "#1a1a1a",
+                fontWeight: "400",
+              }}
+            >
+              resume
+            </a>
+          </div>
+        </div>
+      </nav>
+
       {/* Main content */}
       <div
         style={{
@@ -61,7 +112,7 @@ export default function Portfolio() {
         }}
       >
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {/* Blob placeholder */}
+          {/* Image blob placeholder */}
           <div
             style={{
               width: "650px",
@@ -69,18 +120,18 @@ export default function Portfolio() {
               background: "#2d3e50",
               borderRadius: "60px",
               margin: "0 auto 50px",
-              opacity: 0.85,
+              opacity: 0.3,
             }}
           />
 
-          {/* Welcome Card */}
+          {/* About Section */}
           <div
+            id="about"
             style={{
-              background: "rgba(255, 255, 255, 0.9)",
+              background: "rgba(255, 255, 255, 0.7)",
               borderRadius: "20px",
               padding: "40px",
               marginBottom: "30px",
-              boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
             }}
           >
             <h1
@@ -150,7 +201,7 @@ export default function Portfolio() {
           {/* Experiences Card */}
           <div
             style={{
-              background: "rgba(255, 255, 255, 0.9)",
+              background: "rgba(255, 255, 255, 0.7)",
               borderRadius: "20px",
               padding: "40px",
               boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
@@ -180,10 +231,6 @@ export default function Portfolio() {
                     gap: "20px",
                     paddingBottom:
                       index !== experiences.length - 1 ? "24px" : "0",
-                    borderBottom:
-                      index !== experiences.length - 1
-                        ? "1px solid #f0f0f0"
-                        : "none",
                   }}
                 >
                   {/* Image */}
@@ -199,8 +246,19 @@ export default function Portfolio() {
                     }}
                   />
 
-                  {/* Experience details */}
-                  <div style={{ flex: 1, minWidth: 0 }}>
+                  {/* Experience details - WITH BORDER */}
+                  <div
+                    style={{
+                      flex: 1,
+                      minWidth: 0,
+                      borderBottom:
+                        index !== experiences.length - 1
+                          ? "1px solid #f0f0f0"
+                          : "none",
+                      paddingBottom:
+                        index !== experiences.length - 1 ? "24px" : "0",
+                    }}
+                  >
                     <div
                       style={{
                         display: "flex",
