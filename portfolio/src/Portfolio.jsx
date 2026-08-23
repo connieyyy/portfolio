@@ -71,7 +71,9 @@ export default function Portfolio() {
             }}
           >
             <a
-              href="#about"
+              href="https://connieyyy.github.io/portfolio/"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -91,7 +93,9 @@ export default function Portfolio() {
               work
             </a>
             <a
-              href="#resume"
+              href="https://drive.google.com/drive/u/2/folders/1pugtl2c9JIufoZAPftpLLyaW-M2NsfE6"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -130,15 +134,17 @@ export default function Portfolio() {
             style={{
               background: "rgba(255, 255, 255, 0.7)",
               borderRadius: "20px",
+              borderColor: "black",
+              border: "1px solid #b2acac3a",
               padding: "40px",
               marginBottom: "30px",
             }}
           >
             <h1
               style={{
-                fontSize: "28px",
+                fontSize: "24px",
                 fontWeight: "600",
-                margin: "0 0 20px 0",
+                margin: "0 0 10px 0",
                 color: "#1a1a1a",
               }}
             >
@@ -147,10 +153,10 @@ export default function Portfolio() {
 
             <ul
               style={{
-                fontSize: "18px",
+                fontSize: "16px",
                 lineHeight: "1.8",
                 color: "#333",
-                margin: "0 0 25px 0",
+                margin: "0 0 20px 0",
                 paddingLeft: "20px",
               }}
             >
@@ -165,7 +171,7 @@ export default function Portfolio() {
 
             <div
               style={{
-                fontSize: "18px",
+                fontSize: "16px",
                 color: "#1a1a1a",
                 borderTop: "1px solid #e0e0e0",
                 paddingTop: "20px",
@@ -205,11 +211,12 @@ export default function Portfolio() {
               borderRadius: "20px",
               padding: "40px",
               boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
+              border: "1px solid #b2acac3a",
             }}
           >
             <h2
               style={{
-                fontSize: "24px",
+                fontSize: "20px",
                 fontWeight: "600",
                 margin: "0 0 30px 0",
                 color: "#1a1a1a",
@@ -227,7 +234,7 @@ export default function Portfolio() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    fontSize: "18px",
+                    fontSize: "16px",
                     gap: "20px",
                     paddingBottom:
                       index !== experiences.length - 1 ? "24px" : "0",
@@ -238,8 +245,8 @@ export default function Portfolio() {
                     src={exp.image}
                     alt={exp.company}
                     style={{
-                      width: "50px",
-                      height: "50px",
+                      width: "45px",
+                      height: "45px",
                       borderRadius: "8px",
                       objectFit: "cover",
                       flexShrink: 0,
@@ -253,7 +260,7 @@ export default function Portfolio() {
                       minWidth: 0,
                       borderBottom:
                         index !== experiences.length - 1
-                          ? "1px solid #f0f0f0"
+                          ? "1px solid #c5c0c04d"
                           : "none",
                       paddingBottom:
                         index !== experiences.length - 1 ? "24px" : "0",
@@ -294,7 +301,7 @@ export default function Portfolio() {
                       <span
                         style={{
                           color: "#666",
-                          fontSize: "18px",
+                          fontSize: "16px",
                           whiteSpace: "nowrap",
                           flexShrink: 0,
                         }}
