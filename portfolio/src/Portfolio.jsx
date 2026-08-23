@@ -1,4 +1,9 @@
 import React from "react";
+import HackLogo from "./images/hack-logo.png";
+import IcsLogo from "./images/ucidbh.jpeg";
+import AmazonLogo from "./images/aws-logo.jpeg";
+import ArityLogo from "./images/arity-logo.jpeg";
+import EssLogo from "./images/uciess.jpeg";
 
 export default function Portfolio() {
   const experiences = [
@@ -7,36 +12,42 @@ export default function Portfolio() {
       company: "hack at uci",
       link: "https://hack.ics.uci.edu/",
       date: "2023 – present",
+      image: HackLogo,
     },
     {
       title: "software development engineer intern",
       company: "amazon web services",
       link: "https://aws.amazon.com/outposts/",
       date: "2026",
+      image: AmazonLogo,
     },
     {
       title: "research assistant",
       company: "primeau lab",
       link: "#",
       date: "2024 – 2025",
+      image: EssLogo,
     },
     {
       title: "ai/ml fellow",
       company: "arity",
       link: "https://arity.com/",
       date: "2025",
+      image: ArityLogo,
     },
     {
       title: "software development engineer intern",
       company: "amazon web services",
       link: "https://aws.amazon.com/outposts/",
       date: "2025",
+      image: AmazonLogo,
     },
     {
       title: "python programming learning assistant",
       company: "uc irvine",
       link: "#",
       date: "2024",
+      image: IcsLogo,
     },
   ];
 
@@ -62,6 +73,7 @@ export default function Portfolio() {
             }}
           />
 
+          {/* Welcome Card */}
           <div
             style={{
               background: "rgba(255, 255, 255, 0.9)",
@@ -93,7 +105,7 @@ export default function Portfolio() {
             >
               <li>senior @ uc irvine, studying computer science</li>
               <li>lived in the bay area, seattle, irvine</li>
-              <li>love to explore and try new experiences + food!</li>
+              <li>love to explore and try new experiences + FOOD!</li>
               <li>
                 passionate about building community, social good, finance, and
                 technology
@@ -135,6 +147,7 @@ export default function Portfolio() {
             </div>
           </div>
 
+          {/* Experiences Card */}
           <div
             style={{
               background: "rgba(255, 255, 255, 0.9)",
@@ -155,14 +168,14 @@ export default function Portfolio() {
             </h2>
 
             <div
-              style={{ display: "flex", flexDirection: "column", gap: "24px" }}
+              style={{ display: "flex", flexDirection: "column", gap: "0px" }}
             >
               {experiences.map((exp, index) => (
                 <div
                   key={index}
                   style={{
                     display: "flex",
-                    alignItems: "flex-start",
+                    alignItems: "center",
                     fontSize: "18px",
                     gap: "20px",
                     paddingBottom:
@@ -173,15 +186,16 @@ export default function Portfolio() {
                         : "none",
                   }}
                 >
-                  {/* Icon square */}
-                  <div
+                  {/* Image */}
+                  <img
+                    src={exp.image}
+                    alt={exp.company}
                     style={{
-                      width: "24px",
-                      height: "24px",
-                      background: "#3a4a56",
-                      borderRadius: "4px",
+                      width: "50px",
+                      height: "50px",
+                      borderRadius: "8px",
+                      objectFit: "cover",
                       flexShrink: 0,
-                      marginTop: "2px",
                     }}
                   />
 
@@ -197,7 +211,12 @@ export default function Portfolio() {
                       }}
                     >
                       <div>
-                        <span style={{ fontWeight: "300", color: "#1a1a1a" }}>
+                        <span
+                          style={{
+                            fontWeight: "300",
+                            color: "#1a1a1a",
+                          }}
+                        >
                           {exp.title}
                         </span>
                         {" @ "}
@@ -217,7 +236,7 @@ export default function Portfolio() {
                       <span
                         style={{
                           color: "#666",
-                          fontSize: "15px",
+                          fontSize: "18px",
                           whiteSpace: "nowrap",
                           flexShrink: 0,
                         }}
