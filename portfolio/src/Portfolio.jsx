@@ -175,7 +175,9 @@ export default function Portfolio() {
               work
             </a>
             <a
-              href="#resume"
+              href="https://drive.google.com/file/d/1CwfUC5fccoqMWCrq-9MDR1CkSHt2SIJ8/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
