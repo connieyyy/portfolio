@@ -1,14 +1,29 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.5efc4c25.js",
+    "main.js": "/portfolio/static/js/main.b786bb0b.js",
     "static/js/453.0b72f93f.chunk.js": "/portfolio/static/js/453.0b72f93f.chunk.js",
+    "static/media/ih-lobby.png": "/portfolio/static/media/ih-lobby.c356512b37fc25cb5781.png",
     "static/media/me-chihuly.jpg": "/portfolio/static/media/me-chihuly.2ad394efa793f5a21b76.jpg",
     "static/media/fullme.jpg": "/portfolio/static/media/fullme.0358b4948d247230969a.jpg",
     "static/media/me-hellenika.jpg": "/portfolio/static/media/me-hellenika.1e1183eaddae465f6e7f.jpg",
+    "static/media/ih-rots.png": "/portfolio/static/media/ih-rots.1f2cd7bf167ff3558211.png",
+    "static/media/ih-queue-impact.png": "/portfolio/static/media/ih-queue-impact.163fd18fb6c23e89eb8d.png",
+    "static/media/ih-my-availability.png": "/portfolio/static/media/ih-my-availability.592ae8e37b372bfa653a.png",
     "static/media/appdemo.png": "/portfolio/static/media/appdemo.ee3b96f1b1959be3083c.png",
+    "static/media/ih-availability-management-director.png": "/portfolio/static/media/ih-availability-management-director.7848c46fc5367fb24d70.png",
     "static/media/me-griffith.jpg": "/portfolio/static/media/me-griffith.8fcc72757af6e3ec74ee.jpg",
     "static/media/me-disney.jpg": "/portfolio/static/media/me-disney.98016b2b31c3015cb35f.jpg",
-    "static/media/cloud-3.png": "/portfolio/static/media/cloud-3.45dbb02cef9f19708961.png",
+    "static/media/ih-shifts-management-2.png": "/portfolio/static/media/ih-shifts-management-2.2a2f34a1fb98dbffd921.png",
+    "static/media/ih-add-perms.png": "/portfolio/static/media/ih-add-perms.aca33a8d56845f5a5d7f.png",
+    "static/media/ih-scheduler.png": "/portfolio/static/media/ih-scheduler.9c915c5adeb86cd01dde.png",
+    "static/media/ih-template-gallery.png": "/portfolio/static/media/ih-template-gallery.047f1da2f385fe7038c6.png",
+    "static/media/ih-shifts-management-1.png": "/portfolio/static/media/ih-shifts-management-1.74718db078b76e6fc364.png",
+    "static/media/ih-availability-management.png": "/portfolio/static/media/ih-availability-management.4265d89982bd233c7938.png",
+    "static/media/ih-queue-management.png": "/portfolio/static/media/ih-queue-management.a4433ea8c471c3fbd529.png",
+    "static/media/ih-queue-mapping.png": "/portfolio/static/media/ih-queue-mapping.29942786e0cf274b1f16.png",
+    "static/media/ih-queue-page.png": "/portfolio/static/media/ih-queue-page.35ccf069d85f5094a283.png",
+    "static/media/ih-reviewer-revamp.png": "/portfolio/static/media/ih-reviewer-revamp.30d9f5d95b5c88b7a30b.png",
+    "static/media/ih-queue-mapping-2.png": "/portfolio/static/media/ih-queue-mapping-2.1bcf686b40691fabb671.png",
     "static/media/cloud-1.png": "/portfolio/static/media/cloud-1.04563896afb259edfc53.png",
     "static/media/cloud-2.png": "/portfolio/static/media/cloud-2.023281a1b647ff8c5cbf.png",
     "static/media/cloud-4.png": "/portfolio/static/media/cloud-4.d83fc8512429ad085cb9.png",
@@ -17,10 +32,10 @@
     "static/media/arity-logo.jpeg": "/portfolio/static/media/arity-logo.23d7553f211fe8414073.jpeg",
     "static/media/ucidbh.jpeg": "/portfolio/static/media/ucidbh.6b2e926174bd065427be.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.5efc4c25.js.map": "/portfolio/static/js/main.5efc4c25.js.map",
+    "main.b786bb0b.js.map": "/portfolio/static/js/main.b786bb0b.js.map",
     "453.0b72f93f.chunk.js.map": "/portfolio/static/js/453.0b72f93f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.5efc4c25.js"
+    "static/js/main.b786bb0b.js"
   ]
 }
