@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.9d338c5c.js",
+    "main.js": "/portfolio/static/js/main.5efc4c25.js",
     "static/js/453.0b72f93f.chunk.js": "/portfolio/static/js/453.0b72f93f.chunk.js",
+    "static/media/me-chihuly.jpg": "/portfolio/static/media/me-chihuly.2ad394efa793f5a21b76.jpg",
+    "static/media/fullme.jpg": "/portfolio/static/media/fullme.0358b4948d247230969a.jpg",
+    "static/media/me-hellenika.jpg": "/portfolio/static/media/me-hellenika.1e1183eaddae465f6e7f.jpg",
     "static/media/appdemo.png": "/portfolio/static/media/appdemo.ee3b96f1b1959be3083c.png",
+    "static/media/me-griffith.jpg": "/portfolio/static/media/me-griffith.8fcc72757af6e3ec74ee.jpg",
+    "static/media/me-disney.jpg": "/portfolio/static/media/me-disney.98016b2b31c3015cb35f.jpg",
+    "static/media/cloud-3.png": "/portfolio/static/media/cloud-3.45dbb02cef9f19708961.png",
+    "static/media/cloud-1.png": "/portfolio/static/media/cloud-1.04563896afb259edfc53.png",
+    "static/media/cloud-2.png": "/portfolio/static/media/cloud-2.023281a1b647ff8c5cbf.png",
+    "static/media/cloud-4.png": "/portfolio/static/media/cloud-4.d83fc8512429ad085cb9.png",
+    "static/media/cloud-5.png": "/portfolio/static/media/cloud-5.85d8ac6daad8e2b36284.png",
     "static/media/hack-logo.png": "/portfolio/static/media/hack-logo.83082790fbc125b2827c.png",
     "static/media/arity-logo.jpeg": "/portfolio/static/media/arity-logo.23d7553f211fe8414073.jpeg",
     "static/media/ucidbh.jpeg": "/portfolio/static/media/ucidbh.6b2e926174bd065427be.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.9d338c5c.js.map": "/portfolio/static/js/main.9d338c5c.js.map",
+    "main.5efc4c25.js.map": "/portfolio/static/js/main.5efc4c25.js.map",
     "453.0b72f93f.chunk.js.map": "/portfolio/static/js/453.0b72f93f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9d338c5c.js"
+    "static/js/main.5efc4c25.js"
   ]
 }
