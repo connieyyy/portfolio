@@ -12,7 +12,6 @@ import ChihulyMe from "./images/me-chihuly.jpg";
 
 import Cloud1 from "./images/cloud-1.png";
 import Cloud2 from "./images/cloud-2.png";
-import Cloud3 from "./images/cloud-3.png";
 import Cloud4 from "./images/cloud-4.png";
 import Cloud5 from "./images/cloud-5.png";
 
@@ -120,8 +119,8 @@ export default function Portfolio() {
           style={{
             position: "absolute",
             width: "220px",
-            top: "35%",
-            left: "8%",
+            top: "80%",
+            left: "10%",
             opacity: 0.4,
           }}
         />
@@ -133,7 +132,7 @@ export default function Portfolio() {
             position: "absolute",
             width: "160px",
             top: "50%",
-            right: "8%",
+            right: "10%",
             opacity: 0.5,
           }}
         />

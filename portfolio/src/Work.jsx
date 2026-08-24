@@ -1,49 +1,138 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import FroggyFriend from "./images/appdemo.png";
+import QueueManagementPage from "./images/ih-queue-management.png";
+import ArityLogo from "./images/arity-logo.jpeg";
+import SchedulerPage from "./images/ih-scheduler.png";
+import ReviewerPage from "./images/ih-reviewer-revamp.png";
+import AddOrgsPage from "./images/ih-add-perms.png";
+
+import Cloud1 from "./images/cloud-1.png";
+import Cloud2 from "./images/cloud-2.png";
+import Cloud4 from "./images/cloud-4.png";
+import Cloud5 from "./images/cloud-5.png";
 
 export default function Work() {
   const projects = [
     {
-      title: "IrvineHacks – Scheduler",
-      image: "https://via.placeholder.com/300x200?text=Scheduler",
-      description: "Hackathon portal.",
+      title: "IrvineHacks – Shift Scheduler",
+      image: SchedulerPage,
+      description: "Automate shift scheduling for directors.",
       link: "#",
     },
     {
       title: "Arity",
-      image: "https://via.placeholder.com/300x200?text=Arity",
-      description: "Classifying turns with coordinates.",
+      image: ArityLogo,
+      description:
+        "Classifying turns with GPS coordinates. Article in progress.",
       link: "#",
     },
     {
-      title: "IrvineHacks – Queue",
-      image: "https://via.placeholder.com/300x200?text=Queue",
-      description: "Movie e-commerce website.",
+      title: "IrvineHacks – Queue + QR Code",
+      image: QueueManagementPage,
+      description: "Managing waitlist queue for IrvineHacks.",
       link: "#",
     },
     {
-      title: "IrvineHacks – Dashboard",
-      image: "https://via.placeholder.com/300x200?text=Dashboard",
-      description: "Frog companion mobile app.",
+      title: "IrvineHacks – Perms Page",
+      image: AddOrgsPage,
+      description:
+        "Revamp perms management page for directors. Article in progress.",
       link: "#",
     },
     {
-      title: "IrvineHacks – Dashboard",
-      image: "https://via.placeholder.com/300x200?text=Dashboard2",
-      description: "Movie e-commerce website.",
+      title: "IrvineHacks – Reviewer Page",
+      image: ReviewerPage,
+      description:
+        "Anonymizing applicants to remove reviewer bias. Article in progress.",
       link: "#",
     },
     {
       title: "Froggy Friend",
       image: FroggyFriend,
-      description: "Frog companion mobile app.",
+      description:
+        "Frog companion mobile app for healthy eating. Article in progress.",
       link: "#",
     },
   ];
 
   return (
     <div style={{ width: "100%", margin: 0, padding: 0 }}>
+      <style>{`
+              @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+              }
+              
+              .cloud-1 { animation: float 4s ease-in-out infinite; }
+              .cloud-2 { animation: float 5s ease-in-out infinite 0.5s; }
+              .cloud-3 { animation: float 6s ease-in-out infinite 1s; }
+              .cloud-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
+              .cloud-5 { animation: float 5.5s ease-in-out infinite 2s; }
+            `}</style>
+
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={Cloud1}
+          className="cloud-1"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "200px",
+            top: "5%",
+            left: "2%",
+            opacity: 0.6,
+          }}
+        />
+        <img
+          src={Cloud2}
+          className="cloud-2"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "180px",
+            top: "15%",
+            right: "5%",
+            opacity: 0.5,
+          }}
+        />
+        <img
+          src={Cloud5}
+          className="cloud-3"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "220px",
+            top: "80%",
+            left: "10%",
+            opacity: 0.4,
+          }}
+        />
+        <img
+          src={Cloud4}
+          className="cloud-4"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "160px",
+            top: "50%",
+            right: "10%",
+            opacity: 0.5,
+          }}
+        />
+      </div>
+
       {/* Navigation Bar */}
       <nav
         style={{
@@ -121,7 +210,7 @@ export default function Work() {
       {/* Main content */}
       <div
         style={{
-          padding: "60px 40px 100px",
+          padding: "0px 40px 100px",
           minHeight: "100vh",
         }}
       >
