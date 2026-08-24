@@ -1,15 +1,20 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import HackLogo from "./images/hack-logo.png";
 import IcsLogo from "./images/ucidbh.jpeg";
 import AmazonLogo from "./images/aws-logo.jpeg";
 import ArityLogo from "./images/arity-logo.jpeg";
 import EssLogo from "./images/uciess.jpeg";
-import ChihulyMe from "./images/me-chihuly.jpg";
 import GriffithMe from "./images/me-griffith.jpg";
 import HellenikaMe from "./images/me-hellenika.jpg";
-import IrvineHacksMe from "./images/fullme.jpg";
 import DisneyMe from "./images/me-disney.jpg";
+import IrvineHacksMe from "./images/fullme.jpg";
+import ChihulyMe from "./images/me-chihuly.jpg";
+
+import Cloud1 from "./images/cloud-1.png";
+import Cloud2 from "./images/cloud-2.png";
+import Cloud3 from "./images/cloud-3.png";
+import Cloud4 from "./images/cloud-4.png";
+import Cloud5 from "./images/cloud-5.png";
 
 export default function Portfolio() {
   const experiences = [
@@ -59,7 +64,81 @@ export default function Portfolio() {
 
   return (
     <div style={{ width: "100%", margin: 0, padding: 0 }}>
-      {/* Navigation Bar */}
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        
+        .cloud-1 { animation: float 4s ease-in-out infinite; }
+        .cloud-2 { animation: float 5s ease-in-out infinite 0.5s; }
+        .cloud-3 { animation: float 6s ease-in-out infinite 1s; }
+        .cloud-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
+        .cloud-5 { animation: float 5.5s ease-in-out infinite 2s; }
+      `}</style>
+
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          pointerEvents: "none",
+          zIndex: 0,
+          overflow: "hidden",
+        }}
+      >
+        <img
+          src={Cloud1}
+          className="cloud-1"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "200px",
+            top: "5%",
+            left: "2%",
+            opacity: 0.6,
+          }}
+        />
+        <img
+          src={Cloud2}
+          className="cloud-2"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "180px",
+            top: "15%",
+            right: "5%",
+            opacity: 0.5,
+          }}
+        />
+        <img
+          src={Cloud5}
+          className="cloud-3"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "220px",
+            top: "35%",
+            left: "8%",
+            opacity: 0.4,
+          }}
+        />
+        <img
+          src={Cloud4}
+          className="cloud-4"
+          alt="Cloud"
+          style={{
+            position: "absolute",
+            width: "160px",
+            top: "50%",
+            right: "8%",
+            opacity: 0.5,
+          }}
+        />
+      </div>
+
       <nav
         style={{
           background: "transparent",
@@ -76,55 +155,32 @@ export default function Portfolio() {
               fontSize: "16px",
             }}
           >
-            <Link
-              to="/"
+            <a
+              href="#about"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
-                transition: "text-decoration 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.textDecoration = "underline";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.textDecoration = "none";
               }}
             >
               about
-            </Link>
-            <Link
-              to="/work"
+            </a>
+            <a
+              href="/work"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
-                transition: "text-decoration 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.textDecoration = "underline";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.textDecoration = "none";
               }}
             >
               work
-            </Link>
+            </a>
             <a
-              href="https://drive.google.com/file/d/1CwfUC5fccoqMWCrq-9MDR1CkSHt2SIJ8/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#resume"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
                 fontWeight: "400",
-                transition: "text-decoration 0.2s ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.textDecoration = "underline";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.textDecoration = "none";
               }}
             >
               resume
@@ -232,17 +288,15 @@ export default function Portfolio() {
             style={{
               background: "rgba(255, 255, 255, 0.7)",
               borderRadius: "20px",
-              borderColor: "black",
-              border: "1px solid #b2acac3a",
               padding: "40px",
               marginBottom: "30px",
             }}
           >
             <h1
               style={{
-                fontSize: "24px",
+                fontSize: "28px",
                 fontWeight: "600",
-                margin: "0 0 10px 0",
+                margin: "0 0 20px 0",
                 color: "#1a1a1a",
               }}
             >
@@ -251,10 +305,10 @@ export default function Portfolio() {
 
             <ul
               style={{
-                fontSize: "16px",
+                fontSize: "18px",
                 lineHeight: "1.8",
                 color: "#333",
-                margin: "0 0 20px 0",
+                margin: "0 0 25px 0",
                 paddingLeft: "20px",
               }}
             >
@@ -269,7 +323,7 @@ export default function Portfolio() {
 
             <div
               style={{
-                fontSize: "16px",
+                fontSize: "18px",
                 color: "#1a1a1a",
                 borderTop: "1px solid #e0e0e0",
                 paddingTop: "20px",
@@ -302,19 +356,17 @@ export default function Portfolio() {
             </div>
           </div>
 
-          {/* Experiences Card */}
           <div
             style={{
               background: "rgba(255, 255, 255, 0.7)",
               borderRadius: "20px",
               padding: "40px",
               boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
-              border: "1px solid #b2acac3a",
             }}
           >
             <h2
               style={{
-                fontSize: "20px",
+                fontSize: "24px",
                 fontWeight: "600",
                 margin: "0 0 30px 0",
                 color: "#1a1a1a",
@@ -332,7 +384,7 @@ export default function Portfolio() {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    fontSize: "16px",
+                    fontSize: "18px",
                     gap: "20px",
                     paddingBottom:
                       index !== experiences.length - 1 ? "24px" : "0",
@@ -343,8 +395,8 @@ export default function Portfolio() {
                     src={exp.image}
                     alt={exp.company}
                     style={{
-                      width: "45px",
-                      height: "45px",
+                      width: "50px",
+                      height: "50px",
                       borderRadius: "8px",
                       objectFit: "cover",
                       flexShrink: 0,
@@ -358,7 +410,7 @@ export default function Portfolio() {
                       minWidth: 0,
                       borderBottom:
                         index !== experiences.length - 1
-                          ? "1px solid #c5c0c04d"
+                          ? "1px solid #f0f0f0"
                           : "none",
                       paddingBottom:
                         index !== experiences.length - 1 ? "24px" : "0",
@@ -399,7 +451,7 @@ export default function Portfolio() {
                       <span
                         style={{
                           color: "#666",
-                          fontSize: "16px",
+                          fontSize: "18px",
                           whiteSpace: "nowrap",
                           flexShrink: 0,
                         }}
