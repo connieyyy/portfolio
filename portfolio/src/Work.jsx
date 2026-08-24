@@ -15,44 +15,44 @@ import Cloud5 from "./images/cloud-5.png";
 export default function Work() {
   const projects = [
     {
+      id: "shift-scheduler",
       title: "IrvineHacks – Shift Scheduler",
       image: SchedulerPage,
       description: "Automate shift scheduling for directors.",
-      link: "#",
     },
     {
+      id: "arity",
       title: "Arity",
       image: ArityLogo,
       description:
         "Classifying turns with GPS coordinates. Article in progress.",
-      link: "#",
     },
     {
+      id: "queue-management",
       title: "IrvineHacks – Queue + QR Code",
       image: QueueManagementPage,
       description: "Managing waitlist queue for IrvineHacks.",
-      link: "#",
     },
     {
+      id: "perms-page",
       title: "IrvineHacks – Perms Page",
       image: AddOrgsPage,
       description:
         "Revamp perms management page for directors. Article in progress.",
-      link: "#",
     },
     {
+      id: "reviewer-page",
       title: "IrvineHacks – Reviewer Page",
       image: ReviewerPage,
       description:
         "Anonymizing applicants to remove reviewer bias. Article in progress.",
-      link: "#",
     },
     {
+      id: "froggy-friend",
       title: "Froggy Friend",
       image: FroggyFriend,
       description:
         "Frog companion mobile app for healthy eating. Article in progress.",
-      link: "#",
     },
   ];
 
@@ -224,10 +224,10 @@ export default function Work() {
               marginTop: "40px",
             }}
           >
-            {projects.map((project, index) => (
-              <a
-                key={index}
-                href={project.link}
+            {projects.map((project) => (
+              <Link
+                key={project.id}
+                to={`/project/${project.id}`}
                 style={{
                   textDecoration: "none",
                   color: "inherit",
@@ -253,7 +253,6 @@ export default function Work() {
                       "0 2px 8px rgba(0, 0, 0, 0.08)";
                   }}
                 >
-                  {/* Title */}
                   <h3
                     style={{
                       fontSize: "20px",
@@ -266,7 +265,6 @@ export default function Work() {
                     {project.title}
                   </h3>
 
-                  {/* Image */}
                   <img
                     src={project.image}
                     alt={project.title}
@@ -279,7 +277,6 @@ export default function Work() {
                     }}
                   />
 
-                  {/* Description */}
                   <p
                     style={{
                       fontSize: "16px",
@@ -291,7 +288,7 @@ export default function Work() {
                     {project.description}
                   </p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
