@@ -7,6 +7,11 @@ import MyAvailability from "./images/ih-my-availability.png";
 import ShiftsManagement from "./images/ih-shifts-management-1.png";
 import ShiftsManagement2 from "./images/ih-shifts-management-2.png";
 import ROTS from "./images/ih-rots.png";
+import IrvineHacksLobby from "./images/ih-lobby.png";
+import QueueImpact from "./images/ih-queue-impact.png";
+import QueuePage from "./images/ih-queue-page.png";
+import QueueMapping from "./images/ih-queue-mapping.png";
+import QueueMapping2 from "./images/ih-queue-mapping-2.png";
 
 export default function ProjectDetail() {
   const { id } = useParams();
@@ -214,12 +219,156 @@ export default function ProjectDetail() {
     },
 
     "queue-management": {
-      title: "IrvineHacks – Queue + QR Code",
+      title: "IrvineHacks – Queue Management + QR Code Systems",
       description: "Managing waitlist queue for IrvineHacks.",
       content: (
         <>
-          <h2>Overview</h2>
-          <p>Write about your Queue and QR Code system here.</p>
+          <h2>Context</h2>
+          <p>
+            IrvineHacks is UC Irvine’s annual flagship hackathon with capacity
+            for 400 participants. After COVID-19 passed, in person attendance
+            numbers have declined and there was difficulty maxing out our venue.
+            During IrvineHacks 2024, we had 371 attendees show up while
+            IrvineHacks 2025 had 337 attendees. This was bad for our
+            organization because we had a lot of open spots, and our resources
+            were not being used. We were also overspending because we allocated
+            money for the 400 hackers, but not all of those people would show
+            up.
+          </p>
+          <br></br>
+          <h2>Proposed Solution</h2>
+          <p>
+            I worked with two other members, Ethan and Yousef, to address this
+            issue by first drafting a proposal. I realized that we could give
+            applicants multiple opportunities to be guaranteed a spot on the day
+            of the hackathon because a lot of people cancelled last minute.
+            Hence, after the RSVP period, we gave waitlisted hackers a chance to
+            RSVP yes to guarantee themselves a spot on a first come first serve
+            basis. Those who were unable to RSVP would have another chance by
+            coming in person and joining a waitlist queue to get a spot.
+          </p>
+          <br></br>
+
+          <img
+            src={QueueMapping}
+            alt="Scheduler screen 1"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+          <img
+            src={QueueMapping2}
+            alt="Scheduler screen 1"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <h2>Extended Problem</h2>
+          <p>
+            I later realized another problem was the process of our waitlist
+            line. In the past, we had waitlisted hackers line up in person the
+            whole period. Some hackers tried to stay in line and let accepted
+            hackers go in front of them to try to be first in line even though
+            we weren’t ready to take waitlisted participants yet. Another
+            discouraging factor of joining this physical line was that many
+            people would see a lot of people in the lobby and not want to join
+            even though they would’ve been able to get a spot.
+          </p>
+          <br></br>
+          <img
+            src={IrvineHacksLobby}
+            alt="Scheduler screen 1"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+          <h2>Solution (in depth) </h2>
+          <p>
+            For the actual implementation, I migrated from manual search check
+            in to a QR code based check in system. Users would be able to pull
+            out their QR codes and our organizers would scan. The system would
+            automatically pick up their applicant status (i.e., waitlisted,
+            accepted, rejected) and add the user to the waitlist or check in the
+            hacker immediately.{" "}
+          </p>
+          <br></br>
+
+          <p>
+            From the check in lead POV, the dashboard would show the status of
+            all participants (shown below). The check in lead could pull 400 - X
+            participants from the queue and send them an email when we were
+            ready. We had a log on the side to keep track of how much time
+            hackers had before pulling the next batch as well as a queue
+            timer.{" "}
+          </p>
+          <br></br>
+
+          <img
+            src={QueuePage}
+            alt="Scheduler screen 1"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+          <img
+            src={QueueImpact}
+            alt="Scheduler screen 1"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+          <h2>Impact</h2>
+          <p>
+            The director can then review the auto generated schedule, make
+            tweaks if needed, and once they're satisfied, publish it so
+            organizers can see their assignments.
+          </p>
+          <br></br>
+          <p>
+            With this project, I was able to accomplish the following:{" "}
+            <ul>
+              <li>
+                Developed a QR-based check in system using React, Rest APIs, and
+                TypeScript
+              </li>
+              <li>
+                Replaced manual attendee lookups for 400+ hackers and reduced
+                check-in time by 50%
+              </li>
+              <li>
+                Engineered a waitlist queue system with Python, FastAPI, and
+                MongoDB that allows guests to leave and return, reducing lobby
+                congestion by 25% and increasing waitlist join rates by 50%{" "}
+              </li>
+            </ul>
+          </p>
+          <br></br>
+          <p>
+            For the first time, our team had finally reached 400 with this new
+            admissions/check in system while saving time for the check in
+            process!
+          </p>
         </>
       ),
     },

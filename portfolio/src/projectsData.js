@@ -80,7 +80,6 @@ export const projectsData = {
         type: "text",
         text: "Here are the results...",
       },
-      // More content blocks...
     ],
   },
 };
