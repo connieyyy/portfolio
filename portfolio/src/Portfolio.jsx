@@ -111,7 +111,7 @@ export default function Portfolio() {
               work
             </Link>
             <a
-              href="https://drive.google.com/drive/u/2/folders/1pugtl2c9JIufoZAPftpLLyaW-M2NsfE6"
+              href="https://drive.google.com/file/d/1CwfUC5fccoqMWCrq-9MDR1CkSHt2SIJ8/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -135,7 +135,7 @@ export default function Portfolio() {
 
       <div
         style={{
-          padding: "60px 40px 100px",
+          padding: "0px 40px 100px",
           minHeight: "100vh",
         }}
       >

@@ -53,7 +53,7 @@ export default function Work() {
           zIndex: 100,
         }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           <div
             style={{
               display: "flex",
@@ -125,7 +125,7 @@ export default function Work() {
           minHeight: "100vh",
         }}
       >
-        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
           {/* Projects Grid */}
           <div
             style={{
