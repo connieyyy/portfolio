@@ -152,6 +152,7 @@ export default function Work() {
           >
             <Link
               to="/"
+              state={{ scrollTo: "about" }}
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",

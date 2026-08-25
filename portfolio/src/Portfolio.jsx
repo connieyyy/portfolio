@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import HackLogo from "./images/hack-logo.png";
 import IcsLogo from "./images/ucidbh.jpeg";
 import AmazonLogo from "./images/aws-logo.jpeg";
@@ -154,8 +155,9 @@ export default function Portfolio() {
               fontSize: "16px",
             }}
           >
-            <a
-              href="#about"
+            <Link
+              to="/"
+              state={{ scrollTo: "about" }}
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -163,9 +165,9 @@ export default function Portfolio() {
               }}
             >
               about
-            </a>
-            <a
-              href="/work"
+            </Link>
+            <Link
+              to="/work"
               style={{
                 textDecoration: "none",
                 color: "#1a1a1a",
@@ -173,7 +175,7 @@ export default function Portfolio() {
               }}
             >
               work
-            </a>
+            </Link>
             <a
               href="https://drive.google.com/file/d/1CwfUC5fccoqMWCrq-9MDR1CkSHt2SIJ8/view?usp=sharing"
               target="_blank"
@@ -205,6 +207,8 @@ export default function Portfolio() {
             paddingBottom: "10px",
           }}
         >
+          {/* If navigated with state.scrollTo === 'about', scroll when Portfolio mounts */}
+          <PortfolioScrollHandler />
           <div
             style={{
               display: "flex",
@@ -469,4 +473,19 @@ export default function Portfolio() {
       </div>
     </div>
   );
+}
+
+function PortfolioScrollHandler() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location && location.state && location.state.scrollTo === "about") {
+      const el = document.getElementById("about");
+      if (el) {
+        setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 50);
+      }
+    }
+  }, [location]);
+
+  return null;
 }
