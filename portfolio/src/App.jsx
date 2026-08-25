@@ -1,20 +1,18 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./Portfolio";
 import Work from "./Work";
 import ProjectDetail from "./ProjectDetail";
 
-const basename = process.env.NODE_ENV === "production" ? "/portfolio" : "";
-
 export default function App() {
   return (
-    <BrowserRouter basename={basename}>
+    <HashRouter>
+      {" "}
       <Routes>
         <Route path="/" element={<Portfolio />} />
         <Route path="/work" element={<Work />} />
-        <Route path="*" element={<Portfolio />} />
-        <Route path="/project/:id" element={<ProjectDetail />} />
+        <Route path="/project/:projectId" element={<ProjectDetail />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
