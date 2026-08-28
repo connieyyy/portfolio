@@ -24,12 +24,11 @@ export default function Work() {
       id: "arity",
       title: "Arity",
       image: ArityLogo,
-      description:
-        "Classifying turns with GPS coordinates. Article in progress.",
+      description: "Classifying turns with GPS coordinates.",
     },
     {
       id: "queue-management",
-      title: "IrvineHacks – Queue + QR Code",
+      title: "IrvineHacks – Queue Management System + QR Code",
       image: QueueManagementPage,
       description: "Managing waitlist queue for IrvineHacks.",
     },
@@ -44,8 +43,7 @@ export default function Work() {
       id: "reviewer-page",
       title: "IrvineHacks – Reviewer Page",
       image: ReviewerPage,
-      description:
-        "Anonymizing applicants to remove reviewer bias. Article in progress.",
+      description: "Anonymizing applicants to remove reviewer bias.",
     },
     {
       id: "froggy-friend",

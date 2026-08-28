@@ -1,5 +1,11 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
+import ArityDataInterpretation from "./images/arity-data-interpretation.jpg";
+import ArityDataOverview from "./images/arity-data-overview.jpg";
+import ArityDataPatternProcessing from "./images/arity-data-pattern-processing.jpg";
+import ArityRealWorldPlotting from "./images/arity-real-world-plotting.jpg";
+import ArityReplicability from "./images/arity-replicability.jpg";
+import ArityResults from "./images/arity-results.jpg";
 import AvailabilityManagement from "./images/ih-availability-management.png";
 import TemplateGallery from "./images/ih-template-gallery.png";
 import AvailabilityManagementDirectorView from "./images/ih-availability-management-director.png";
@@ -8,13 +14,14 @@ import ShiftsManagement from "./images/ih-shifts-management-1.png";
 import ShiftsManagement2 from "./images/ih-shifts-management-2.png";
 import ROTS from "./images/ih-rots.png";
 import IrvineHacksLobby from "./images/ih-lobby.png";
+import ReviewerPage from "./images/ih-reviewer-revamp.png";
 import QueueImpact from "./images/ih-queue-impact.png";
 import QueuePage from "./images/ih-queue-page.png";
 import QueueMapping from "./images/ih-queue-mapping.png";
 import QueueMapping2 from "./images/ih-queue-mapping-2.png";
 
 export default function ProjectDetail() {
-  const { id } = useParams();
+  const { projectId } = useParams();
 
   const projects = {
     "shift-scheduler": {
@@ -90,7 +97,7 @@ export default function ProjectDetail() {
           </div>
 
           <h4>Technologies Used</h4>
-          <p>Typescript, FastAPI, MongoDB, Claude Code</p>
+          <p>Python, Typescript, FastAPI, MongoDB, Claude Code</p>
           <br></br>
           <p>
             The core idea was to automate the assignment process while building
@@ -191,7 +198,13 @@ export default function ProjectDetail() {
           <br></br>
           <p>
             With this project, I was able to accomplish the following:{" "}
-            <ul>
+            <ul
+              style={{
+                paddingLeft: "1.5rem",
+                marginLeft: 0,
+                listStylePosition: "outside",
+              }}
+            >
               <li>
                 Automated shift assignment system, cutting scheduling time by
                 87%
@@ -212,8 +225,275 @@ export default function ProjectDetail() {
       description: "Classifying turns with GPS coordinates.",
       content: (
         <>
-          <h2>Overview</h2>
-          <p>Article in progress.</p>
+          <h2>Context</h2>
+          <p>
+            As part of Break Through Tech's AI Studio program, my team partnered
+            with Arity, a mobility data and analytics company, to analyze
+            telematics data and classify different types of vehicle turning
+            behavior. The goal was to better understand whether sensor data
+            collected during a driving event could be used to distinguish
+            between behaviors such as lane changes, normal turns, sharp turns,
+            and U-turns.
+          </p>
+
+          <br />
+          <img
+            src={ArityDataOverview}
+            alt="Data processing pipeline"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <p>
+            The dataset contained telematics information from both iOS and
+            Android devices across multiple event states. Depending on the
+            state, the data included GPS-based measurements, gyroscope
+            measurements, speed changes, angular changes, lateral acceleration,
+            and radius information. Because vehicle turns can vary significantly
+            in shape and intensity, one of our main challenges was determining
+            which features contained meaningful signals for separating different
+            types of driving behavior.
+          </p>
+
+          <br />
+
+          <img
+            src={ArityDataPatternProcessing}
+            alt="Data processing pipeline"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <h2>Proposed Solution</h2>
+          <p>
+            Our team approached the problem using a combination of unsupervised
+            and supervised machine learning. We first explored clustering
+            algorithms to determine whether the underlying telematics data
+            naturally formed groups corresponding to different types of vehicle
+            turns. We evaluated K-Means, DBSCAN, and HDBSCAN using metrics
+            including silhouette score, Gini score, noise percentage, and the
+            number of clusters produced.
+          </p>
+
+          <br />
+
+          <p>
+            After identifying useful cluster structures, we trained supervised
+            Random Forest models to predict the resulting classifications from
+            the telematics features. This allowed us to compare how well
+            different states and sensor signals could be used to classify
+            vehicle behavior.
+          </p>
+
+          <br />
+
+          <h4>Technologies Used</h4>
+          <p>
+            Python, Pandas, NumPy, Scikit-learn, K-Means, DBSCAN, HDBSCAN,
+            Random Forest, Matplotlib
+          </p>
+
+          <h2>Feature Engineering</h2>
+          <p>
+            Before modeling, we engineered several features to better capture
+            the characteristics of a vehicle's movement. Rather than relying
+            only on raw sensor values, we created metrics that represented the
+            speed, angle, and intensity of each turning event.
+          </p>
+
+          <br />
+
+          <p>
+            One feature, <strong>dv</strong>, represented the absolute change in
+            speed, helping distinguish between aggressive and moderate changes
+            in vehicle movement. We also created <strong>turn_intensity</strong>
+            , a composite metric combining curvature, speed, and lateral
+            acceleration to measure how sharp or abrupt a turn was.
+          </p>
+
+          <br />
+
+          <p>
+            To better represent the geometry of each event, we created
+            <strong> angle_norm</strong>, which normalized angular changes
+            between 0 and 1, and <strong>radius_log</strong>, a logarithmic
+            transformation of GPS and MEMS radius measurements. These features
+            helped distinguish tighter turns and U-turns from wider turns and
+            highway curves.
+          </p>
+
+          <br />
+
+          <h2>Modeling Challenge</h2>
+          <p>
+            One of our biggest findings was that the data did not always
+            naturally separate into clear groups. For example, when modeling
+            State 1 data, HDBSCAN was able to identify some U-turns but
+            struggled to differentiate between other types of turns. The
+            resulting clusters were also highly imbalanced, with one cluster
+            containing the majority of the events.
+          </p>
+
+          <br />
+
+          <p>
+            To better understand this issue, we manually examined the
+            distribution of turn angles. The majority of events fell into the
+            gentle turn category, while sharp turns and U-turns represented only
+            a small percentage of the dataset. This imbalance made it difficult
+            for density-based clustering algorithms to reliably separate every
+            type of vehicle maneuver.
+          </p>
+
+          <br />
+
+          <h2>Solution</h2>
+          <p>
+            After evaluating multiple clustering techniques, we found that
+            K-Means produced the strongest overall results for our data. We used
+            silhouette score, Gini score, noise percentage, and Adjusted Rand
+            Index (ARI) to evaluate how well the generated clusters aligned with
+            manually defined turn categories.
+          </p>
+
+          <br />
+
+          <p>
+            For State 1, the best K-Means model achieved a silhouette score of
+            0.309, a Gini score of 0.342, 0% noise, and an ARI score of 0.274.
+            While the clustering was not perfect, the resulting groups showed
+            interpretable real-world behavior patterns.
+          </p>
+
+          <br />
+
+          <p>
+            The clusters represented different driving behaviors, including lane
+            changes with smaller angle changes and larger radii, sharp left
+            turns with smaller radii, normal left turns, and U-turn-like
+            maneuvers. This helped us move beyond simply evaluating numerical
+            metrics and interpret what the clusters represented in a real
+            driving context.
+          </p>
+
+          <br />
+
+          <img
+            src={ArityResults}
+            alt="K-Means clustering results"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <img
+            src={ArityDataInterpretation}
+            alt="Real world vehicle turn clustering visualization"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <img
+            src={ArityRealWorldPlotting}
+            alt="Real world vehicle turn clustering visualization"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <h2>Supervised Learning</h2>
+          <p>
+            After exploring the structure of the data through clustering, we
+            trained Random Forest models to predict the classifications using
+            the engineered telematics features. The supervised models performed
+            strongly across all three states.
+          </p>
+
+          <br />
+
+          <img
+            src={ArityReplicability}
+            alt="Random Forest model performance"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <h2>Impact</h2>
+          <p>
+            Through this project, our team found that supervised learning could
+            reliably classify the vehicle turning behaviors identified during
+            our analysis. The Random Forest model achieved 98% accuracy for
+            State 0 and 96% accuracy for both State 1 and State 2.
+          </p>
+
+          <br />
+
+          <p>With this project, I was able to accomplish the following:</p>
+
+          <ul
+            style={{
+              paddingLeft: "1.5rem",
+              marginLeft: 0,
+              listStylePosition: "outside",
+            }}
+          >
+            <li>
+              Analyzed telematics data from iOS and Android devices to classify
+              vehicle turning behavior
+            </li>
+            <li>
+              Engineered features including normalized angle change, turn
+              intensity, speed change, and logarithmic turn radius to better
+              represent vehicle movement
+            </li>
+            <li>
+              Evaluated K-Means, DBSCAN, and HDBSCAN clustering models using
+              silhouette score, Gini score, noise percentage, and ARI
+            </li>
+            <li>
+              Trained Random Forest models that achieved up to 98%
+              classification accuracy across vehicle event states
+            </li>
+          </ul>
+
+          <br />
+
+          <p>
+            One of our key findings was that clustering was useful for exploring
+            and validating patterns in the data, but the supervised Random
+            Forest models were ultimately more effective for classification.
+            This suggested that future versions of the project could focus on
+            optimizing supervised models and validating their performance using
+            new telematics data.
+          </p>
         </>
       ),
     },
@@ -271,6 +551,12 @@ export default function ProjectDetail() {
               marginBottom: "20px",
             }}
           />
+
+          <h4>Technologies Used</h4>
+          <p>
+            Python, Typescript, FastAPI, MongoDB, SendGrid Email API, Claude
+            Code
+          </p>
 
           <h2>Extended Problem</h2>
           <p>
@@ -347,7 +633,13 @@ export default function ProjectDetail() {
           <br></br>
           <p>
             With this project, I was able to accomplish the following:{" "}
-            <ul>
+            <ul
+              style={{
+                paddingLeft: "1.5rem",
+                marginLeft: 0,
+                listStylePosition: "outside",
+              }}
+            >
               <li>
                 Developed a QR-based check in system using React, Rest APIs, and
                 TypeScript
@@ -389,8 +681,66 @@ export default function ProjectDetail() {
       description: "Anonymizing applicants to remove reviewer bias.",
       content: (
         <>
-          <h2>Overview</h2>
-          <p>Article in progress.</p>
+          <h2>Context</h2>
+          <p>
+            Managing a large-scale hackathon requires a robust application
+            review process that prioritizes fairness and efficiency. IrvineHacks
+            sought to develop a system that would standardize evaluations across
+            a diverse reviewer pool and streamline administrative workflows. The
+            traditional approach to application review can be subject to
+            inconsistencies in methodology and reviewer assignment, which can
+            impact the overall quality and perception of the selection process.
+          </p>
+          <h4>Technologies Used</h4>
+          <p>Python, React, Typescript, FastAPI, MongoDB, Claude Code</p>
+          <img
+            src={ReviewerPage}
+            alt="Scheduler screen 2"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+              marginTop: "20px",
+            }}
+          />
+          <h2>Solution</h2>
+          <p>
+            We built an anonymized reviewer system that automates and
+            standardizes the application evaluation workflow. The core technical
+            implementation includes an anonymization engine that assigns
+            randomly generated identifiers to each applicant, decoupling
+            reviewer assignments from applicant identity. This ensures
+            evaluations are conducted on application merit alone. The system
+            automatically distributes applicants to reviewers based on workload
+            balancing algorithms, preventing manual reviewer selection and
+            ensuring uniform coverage across the applicant pool. On the backend,
+            we implemented a database layer that tracks review assignments,
+            scores, and decisions while maintaining the anonymity barrier until
+            final determinations are made. The platform also includes
+            administrative tools for quality control. A void function allows
+            organizers to flag applications that don't meet venue eligibility
+            requirements (such as age restrictions), while an auto-accept
+            feature recognizes contributors who have committed to mentoring
+            roles at the event. This dual-path system reduces manual processing
+            time while ensuring special cases are handled appropriately. The
+            interface provides organizers with a streamlined dashboard to manage
+            exceptions and finalize admissions decisions.
+          </p>
+          <br></br>
+          <h2>Impact</h2>
+          <p>
+            By implementing this system, IrvineHacks achieved greater
+            consistency in its review process and reduced administrative
+            workload for organizers. The anonymization framework creates a more
+            structured evaluation environment that supports fair assessment
+            across all applicants. The automated assignment and quality control
+            features minimize processing errors and accelerate the admission
+            timeline, allowing organizers to focus on other aspects of event
+            planning.
+          </p>
+          <br></br>
         </>
       ),
     },
@@ -407,9 +757,7 @@ export default function ProjectDetail() {
     },
   };
 
-  console.log(projects);
-  const project = projects[id];
-  console.log(project);
+  const project = projects[projectId];
 
   if (!project) {
     return (
