@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.7a89c04c.js",
+    "main.js": "/portfolio/static/js/main.696e9bdc.js",
     "static/js/453.0b72f93f.chunk.js": "/portfolio/static/js/453.0b72f93f.chunk.js",
     "static/media/ih-lobby.png": "/portfolio/static/media/ih-lobby.c356512b37fc25cb5781.png",
     "static/media/me-chihuly.jpg": "/portfolio/static/media/me-chihuly.2ad394efa793f5a21b76.jpg",
@@ -40,10 +40,10 @@
     "static/media/arity-logo.jpeg": "/portfolio/static/media/arity-logo.23d7553f211fe8414073.jpeg",
     "static/media/ucidbh.jpeg": "/portfolio/static/media/ucidbh.6b2e926174bd065427be.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.7a89c04c.js.map": "/portfolio/static/js/main.7a89c04c.js.map",
+    "main.696e9bdc.js.map": "/portfolio/static/js/main.696e9bdc.js.map",
     "453.0b72f93f.chunk.js.map": "/portfolio/static/js/453.0b72f93f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.7a89c04c.js"
+    "static/js/main.696e9bdc.js"
   ]
 }
