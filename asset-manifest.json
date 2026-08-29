@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.6d8eff32.js",
+    "main.js": "/portfolio/static/js/main.7a89c04c.js",
     "static/js/453.0b72f93f.chunk.js": "/portfolio/static/js/453.0b72f93f.chunk.js",
     "static/media/ih-lobby.png": "/portfolio/static/media/ih-lobby.c356512b37fc25cb5781.png",
     "static/media/me-chihuly.jpg": "/portfolio/static/media/me-chihuly.2ad394efa793f5a21b76.jpg",
@@ -21,6 +21,8 @@
     "static/media/ih-availability-management.png": "/portfolio/static/media/ih-availability-management.4265d89982bd233c7938.png",
     "static/media/ih-queue-management.png": "/portfolio/static/media/ih-queue-management.a4433ea8c471c3fbd529.png",
     "static/media/ih-queue-mapping.png": "/portfolio/static/media/ih-queue-mapping.29942786e0cf274b1f16.png",
+    "static/media/frogShop.png": "/portfolio/static/media/frogShop.0cbb2132fd51b1548462.png",
+    "static/media/froggyFriendPage.png": "/portfolio/static/media/froggyFriendPage.e0c0e6cca4fa8ce80a93.png",
     "static/media/ih-queue-page.png": "/portfolio/static/media/ih-queue-page.35ccf069d85f5094a283.png",
     "static/media/ih-reviewer-revamp.png": "/portfolio/static/media/ih-reviewer-revamp.30d9f5d95b5c88b7a30b.png",
     "static/media/ih-queue-mapping-2.png": "/portfolio/static/media/ih-queue-mapping-2.1bcf686b40691fabb671.png",
@@ -38,10 +40,10 @@
     "static/media/arity-logo.jpeg": "/portfolio/static/media/arity-logo.23d7553f211fe8414073.jpeg",
     "static/media/ucidbh.jpeg": "/portfolio/static/media/ucidbh.6b2e926174bd065427be.jpeg",
     "index.html": "/portfolio/index.html",
-    "main.6d8eff32.js.map": "/portfolio/static/js/main.6d8eff32.js.map",
+    "main.7a89c04c.js.map": "/portfolio/static/js/main.7a89c04c.js.map",
     "453.0b72f93f.chunk.js.map": "/portfolio/static/js/453.0b72f93f.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.6d8eff32.js"
+    "static/js/main.7a89c04c.js"
   ]
 }
