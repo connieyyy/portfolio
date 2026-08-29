@@ -6,7 +6,6 @@ import ArityLogo from "./images/arity-logo.jpeg";
 import SchedulerPage from "./images/ih-scheduler.png";
 import ReviewerPage from "./images/ih-reviewer-revamp.png";
 import AddOrgsPage from "./images/ih-add-perms.png";
-
 import Cloud1 from "./images/cloud-1.png";
 import Cloud2 from "./images/cloud-2.png";
 import Cloud4 from "./images/cloud-4.png";
@@ -42,7 +41,7 @@ export default function Work() {
       id: "reviewer-page",
       title: "IrvineHacks – Reviewer Page",
       image: ReviewerPage,
-      description: "Anonymizing applicants to remove reviewer bias.",
+      description: "Anonymize applicants to remove reviewer bias.",
     },
     {
       id: "froggy-friend",
@@ -55,17 +54,22 @@ export default function Work() {
   return (
     <div style={{ width: "100%", margin: 0, padding: 0 }}>
       <style>{`
-              @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-20px); }
-              }
-              
-              .cloud-1 { animation: float 4s ease-in-out infinite; }
-              .cloud-2 { animation: float 5s ease-in-out infinite 0.5s; }
-              .cloud-3 { animation: float 6s ease-in-out infinite 1s; }
-              .cloud-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
-              .cloud-5 { animation: float 5.5s ease-in-out infinite 2s; }
-            `}</style>
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-20px); }
+        }
+        .cloud-1 { animation: float 4s ease-in-out infinite; }
+        .cloud-2 { animation: float 5s ease-in-out infinite 0.5s; }
+        .cloud-3 { animation: float 6s ease-in-out infinite 1s; }
+        .cloud-4 { animation: float 4.5s ease-in-out infinite 1.5s; }
+        .cloud-5 { animation: float 5.5s ease-in-out infinite 2s; }
+
+        @media (max-width: 768px) {
+        .projects-grid {
+          grid-template-columns: 1fr !important;
+        }
+      }
+      `}</style>
 
       <div
         style={{
@@ -129,7 +133,6 @@ export default function Work() {
         />
       </div>
 
-      {/* Navigation Bar */}
       <nav
         style={{
           background: "transparent",
@@ -139,13 +142,7 @@ export default function Work() {
         }}
       >
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <div
-            style={{
-              display: "flex",
-              gap: "40px",
-              fontSize: "16px",
-            }}
-          >
+          <div style={{ display: "flex", gap: "40px", fontSize: "16px" }}>
             <Link
               to="/"
               state={{ scrollTo: "about" }}
@@ -204,15 +201,8 @@ export default function Work() {
         </div>
       </nav>
 
-      {/* Main content */}
-      <div
-        style={{
-          padding: "0px 40px 100px",
-          minHeight: "100vh",
-        }}
-      >
+      <div style={{ padding: "0px 40px 100px", minHeight: "100vh" }}>
         <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          {/* Projects Grid */}
           <div
             style={{
               display: "grid",
@@ -220,73 +210,119 @@ export default function Work() {
               gap: "40px",
               marginTop: "40px",
             }}
+            className="projects-grid"
           >
-            {projects.map((project) => (
-              <Link
-                key={project.id}
-                to={`/project/${project.id}`}
-                style={{
-                  textDecoration: "none",
-                  color: "inherit",
-                }}
-              >
-                <div
-                  style={{
-                    background: "rgba(255, 255, 255, 0.7)",
-                    borderRadius: "12px",
-                    padding: "20px",
-                    boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
-                    transition: "transform 0.2s ease, box-shadow 0.2s ease",
-                    cursor: "pointer",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-4px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 8px 16px rgba(0, 0, 0, 0.12)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 2px 8px rgba(0, 0, 0, 0.08)";
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontSize: "20px",
-                      fontWeight: "600",
-                      margin: "0 0 16px 0",
-                      color: "#1a1a1a",
-                      textDecoration: "underline",
-                    }}
-                  >
-                    {project.title}
-                  </h3>
-
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    style={{
-                      width: "100%",
-                      height: "200px",
-                      objectFit: "cover",
-                      borderRadius: "8px",
-                      marginBottom: "16px",
-                    }}
-                  />
-
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      color: "#333",
-                      margin: "0",
-                      lineHeight: "1.6",
-                    }}
-                  >
-                    {project.description}
-                  </p>
+            {projects.map((project) => {
+              const isPerms = project.id === "perms-page";
+              return (
+                <div key={project.id}>
+                  {isPerms ? (
+                    <div
+                      style={{
+                        background: "rgba(255, 255, 255, 0.7)",
+                        borderRadius: "12px",
+                        padding: "20px",
+                        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
+                        cursor: "default",
+                      }}
+                    >
+                      <h3
+                        style={{
+                          fontSize: "20px",
+                          fontWeight: "600",
+                          margin: "0 0 16px 0",
+                          color: "#1a1a1a",
+                          textDecoration: "underline",
+                        }}
+                      >
+                        {project.title}
+                      </h3>
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        style={{
+                          width: "100%",
+                          height: "200px",
+                          objectFit: "cover",
+                          borderRadius: "8px",
+                          marginBottom: "16px",
+                        }}
+                      />
+                      <p
+                        style={{
+                          fontSize: "16px",
+                          color: "#333",
+                          margin: "0",
+                          lineHeight: "1.6",
+                        }}
+                      >
+                        {project.description}
+                      </p>
+                    </div>
+                  ) : (
+                    <Link
+                      to={`/project/${project.id}`}
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <div
+                        style={{
+                          background: "rgba(255, 255, 255, 0.7)",
+                          borderRadius: "12px",
+                          padding: "20px",
+                          boxShadow: "0 2px 8px rgba(0, 0, 0, 0.08)",
+                          transition:
+                            "transform 0.2s ease, box-shadow 0.2s ease",
+                          cursor: "pointer",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "translateY(-4px)";
+                          e.currentTarget.style.boxShadow =
+                            "0 8px 16px rgba(0, 0, 0, 0.12)";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "translateY(0)";
+                          e.currentTarget.style.boxShadow =
+                            "0 2px 8px rgba(0, 0, 0, 0.08)";
+                        }}
+                      >
+                        <h3
+                          style={{
+                            fontSize: "20px",
+                            fontWeight: "600",
+                            margin: "0 0 16px 0",
+                            color: "#1a1a1a",
+                            textDecoration: "underline",
+                          }}
+                        >
+                          {project.title}
+                        </h3>
+                        <img
+                          src={project.image}
+                          alt={project.title}
+                          style={{
+                            width: "100%",
+                            height: "200px",
+                            objectFit: "cover",
+                            borderRadius: "8px",
+                            marginBottom: "16px",
+                          }}
+                        />
+                        <p
+                          style={{
+                            fontSize: "16px",
+                            color: "#333",
+                            margin: "0",
+                            lineHeight: "1.6",
+                          }}
+                        >
+                          {project.description}
+                        </p>
+                      </div>
+                    </Link>
+                  )}
                 </div>
-              </Link>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
