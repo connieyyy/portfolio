@@ -7,6 +7,9 @@ import ArityRealWorldPlotting from "./images/arity-real-world-plotting.jpg";
 import ArityReplicability from "./images/arity-replicability.jpg";
 import ArityResults from "./images/arity-results.jpg";
 import AvailabilityManagement from "./images/ih-availability-management.png";
+import FroggyFriend from "./images/appdemo.png";
+import FroggyFriendShopSystem from "./images/frogShop.png";
+import FroggyFriendAppConcept from "./images/froggyFriendPage.png";
 import TemplateGallery from "./images/ih-template-gallery.png";
 import AvailabilityManagementDirectorView from "./images/ih-availability-management-director.png";
 import MyAvailability from "./images/ih-my-availability.png";
@@ -750,8 +753,205 @@ export default function ProjectDetail() {
       description: "Frog companion mobile app for healthy eating.",
       content: (
         <>
-          <h2>Overview</h2>
-          <p>Article in progress.</p>
+          <img
+            src={FroggyFriend}
+            alt="Froggy Friend app concept"
+            style={{
+              width: "100%",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+          <h2>Context</h2>
+          <p>
+            As a college student, I frequently struggled with maintaining
+            healthy eating habits. I noticed that this was a trend with many
+            other peers. Between packed schedules, limited budgets, and
+            overwhelming food choices, many students know they should eat
+            healthier but struggle to follow through.
+          </p>
+          <br></br>
+          <p>
+            To understand this problem better, my team of 4 surveyed 20 students
+            about their barriers to healthy eating. Time constraints, cost, and
+            limited healthy options all appeared frequently in responses. But
+            the most common barrier mentioned by the overwhelming majority was
+            the difficulty in finding healthy food options that fit their
+            lifestyle. Students weren't lacking willpower, instead they were
+            lacking accessible solutions and motivation.
+          </p>
+          <p>
+            Existing nutrition apps felt clinical and impersonal. They focused
+            on tracking calories and macros, creating guilt and burden rather
+            than joy. We realized the real opportunity wasn't to build another
+            calorie counter it was to make healthy eating emotionally rewarding
+            by connecting it to something students care about.
+          </p>
+          <br></br>
+
+          <h2>Proposed Solution</h2>
+          <p>
+            Working with a team of 4, we brainstormed multiple approaches but
+            kept coming back to one core insight: what if the problem wasn't
+            making students track their food, but rather giving them a reason to
+            care about eating well?
+          </p>
+          <p>
+            That's how <strong>Froggy Friend</strong> was created. Our main goal
+            was to get users to care for a digital frog companion that directly
+            reflects their eating choices. The frog's health bar decreases every
+            10 minutes, creating an ongoing need for care. When users log
+            healthy meals, the frog's health increases. The healthier they eat,
+            the happier their frog becomes.
+          </p>
+          <p>
+            Food logging is simple, just take a photo and describe what you ate.
+            No calorie counting, no macros, no judgment. Users earn coins from
+            logging meals, which they can spend on outfits and food for their
+            frog. By reframing health from "I need to eat better for myself" to
+            "I need to eat better for my frog," we tap into emotional investment
+            and responsibility.
+          </p>
+          <br></br>
+
+          <img
+            src={FroggyFriendAppConcept}
+            alt="Froggy Friend app concept"
+            style={{
+              width: "auto",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <h4>Technologies Used</h4>
+          <p>React, TypeScript, Python, FastAPI, MongoDB, Claude Code</p>
+
+          <h2>Extended Problem</h2>
+          <p>
+            Once we started building the prototype, we discovered several design
+            challenges that threatened the core appeal of the app. The health
+            decay system seemed simple on paper, but in practice it revealed
+            complex tradeoffs.
+          </p>
+          <p>
+            If the frog's health decayed too quickly, users would feel anxious
+            or guilty when they missed meals exactly the negative emotional
+            experience we were trying to avoid. But if it decayed too slowly,
+            there'd be no sense of urgency or motivation. We needed to find the
+            sweet spot where the frog felt like it needed care without making
+            users feel bad about normal eating patterns.
+          </p>
+          <p>
+            Another challenge was food logging friction. We wanted users to log
+            meals easily, but without requiring detailed nutritional analysis
+            that would make it feel like a chore. How could we keep the barrier
+            low while still providing meaningful feedback? And how would we
+            categorize foods as healthy or unhealthy without being judgmental or
+            requiring excessive complexity?
+          </p>
+          <p>
+            The reward loop also needed careful consideration. The coin economy
+            had to feel achievable earning enough to buy shop items should feel
+            rewarding, not grindy. And the shop items themselves had to matter
+            to users, driving engagement beyond just keeping the frog alive.
+          </p>
+          <br></br>
+
+          <h2>Solution</h2>
+          <p>
+            After testing with early users, we settled on a 10 minute decay
+            interval for the frog's health bar. This creates enough urgency to
+            feel real without creating anxiety. If a user misses one meal,
+            they're not punished. However, if they go half a day without
+            logging, they'll notice their frog getting sad.
+          </p>
+          <p>
+            The frog's visual state changes dramatically based on health
+            thresholds. Above 90 health, the frog is animated hopping and
+            jumping—pure joy. Between 30-89, it sits peacefully. Below 30, it
+            cries. Seeing a sad frog is motivation enough to log a meal.
+          </p>
+          <br></br>
+
+          <p>
+            The core friction point was making food logging effortless. Users
+            take a photo of their meal and describe what they ate in a sentence
+            or two. No complex nutritional forms, no calorie counting, no
+            judgment. The system recognizes the input and categorizes it on a
+            simple healthy/unhealthy scale, giving appropriate health increases
+            to the frog.
+          </p>
+          <p>
+            Every meal logged earns coins proportional to how healthy that meal
+            is. Coins can be spent in the shop to purchase outfits, accessories,
+            and special food items for the frog. This creates a secondary reward
+            loop beyond just keeping the frog alive. Even when the frog is at
+            full health, users want to earn enough coins to buy that new hat or
+            special treat.
+          </p>
+          <br></br>
+
+          <img
+            src={FroggyFriendShopSystem}
+            alt="Shop and customization system"
+            style={{
+              width: "auto",
+              height: "auto",
+              display: "block",
+              borderRadius: "12px",
+              marginBottom: "20px",
+            }}
+          />
+
+          <p>
+            The frontend is built with React and TypeScript, switching between
+            frog states based on the frog's health data. When the app loads, it
+            fetches the user's current health and coins from the MongoDB
+            database via FastAPI endpoints. A timer triggers health decay every
+            10 minutes. When the user logs food, a POST request updates the
+            backend, which then sends back new health and coin values, and React
+            rerenders the frog animation accordingly.
+          </p>
+          <br></br>
+          <p>
+            This architecture ensures the frog's state is accurate, even if the
+            user closes and reopens the app. The health continues to decay in
+            the background, and when they return, they see exactly where their
+            frog's health is, creating real urgency that keeps users coming
+            back.
+          </p>
+          <br></br>
+
+          <h2>Impact</h2>
+          <p>
+            Froggy Friend exceeded our expectations in execution, design, and
+            user reception. We tested the app with peers and received
+            overwhelmingly positive feedback about both the concept and the
+            implementation. The emotional connection to the frog companion was
+            immediate and powerful.
+          </p>
+          <br></br>
+          <p>
+            Out of 52 participants competing in the hackathon, we won the
+            judges' prize for best execution of design thinking. The judges
+            specifically noted that they would personally use the app, which
+            validated our entire approach to solving the healthy eating problem
+            through emotional connection rather than clinical tracking.
+          </p>
+
+          <br></br>
+          <p>
+            Froggy Friend proves that technology can drive meaningful behavior
+            change when it taps into emotion and intrinsic motivation. By
+            framing healthy eating as an act of care rather than self
+            discipline, we transformed a common student struggle into a fun,
+            engaging game.
+          </p>
         </>
       ),
     },

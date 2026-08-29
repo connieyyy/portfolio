@@ -36,8 +36,7 @@ export default function Work() {
       id: "perms-page",
       title: "IrvineHacks – Perms Page",
       image: AddOrgsPage,
-      description:
-        "Revamp perms management page for directors. Article in progress.",
+      description: "Revamp perms management page for directors.",
     },
     {
       id: "reviewer-page",
@@ -49,8 +48,7 @@ export default function Work() {
       id: "froggy-friend",
       title: "Froggy Friend",
       image: FroggyFriend,
-      description:
-        "Frog companion mobile app for healthy eating. Article in progress.",
+      description: "Frog companion mobile app for healthy eating.",
     },
   ];
 
