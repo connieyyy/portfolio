@@ -629,12 +629,6 @@ export default function ProjectDetail() {
           />
           <h2>Impact</h2>
           <p>
-            The director can then review the auto generated schedule, make
-            tweaks if needed, and once they're satisfied, publish it so
-            organizers can see their assignments.
-          </p>
-          <br></br>
-          <p>
             With this project, I was able to accomplish the following:{" "}
             <ul
               style={{
