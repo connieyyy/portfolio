@@ -11,7 +11,7 @@ You’ll need Node.js and npm installed.
 
 ```bash
 git clone https://github.com/connieyyy/portfolio.git
-cd portfolio
+cd portfolio/portfolio
 npm install
 npm start
 ```
@@ -26,22 +26,22 @@ and reloads as you edit files.
 | `npm start` | Start the local development server. |
 | `npm test` | Run tests with Create React App’s test runner. |
 | `npm run build` | Create an optimized production build in `build/`. |
-| `npm run deploy` | Build the site and publish `build/` to the `gh-pages` branch. |
 
 ## Deploying
 
-Deployment is manual; pushing a commit to `main` does not publish the site.
-From the project directory, run:
+GitHub Actions builds and deploys the site automatically when changes are
+pushed to the `main` branch. The workflow uses the app in this `portfolio/`
+directory and publishes its production build to GitHub Pages.
 
-```bash
-npm run deploy
-```
+You can also start a deployment manually from the repository’s **Actions** tab
+by selecting **Deploy to GitHub Pages** and choosing **Run workflow**. GitHub
+Pages must be configured to use **GitHub Actions** as its deployment source.
 
-This runs the production build and uses `gh-pages` to publish it. Make sure
-you have permission to push to the GitHub repository. The deploy command
-handles the `gh-pages` branch; you do not need to push to it directly.
+The `npm run deploy` script is also available for publishing the build to the
+`gh-pages` branch directly, but it is separate from the Actions deployment.
 
-To push source-code changes to the main branch, use:
+To publish source changes through the workflow, push them to `main` from the
+repository root:
 
 ```bash
 git push origin main
